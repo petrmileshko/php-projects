@@ -1,0 +1,17 @@
+<form action="" method="post">
+    <fieldset>
+        <legend>Добавление нового пользователя</legend>
+           <label>Имя для входа:
+            <input type="text" name="newLogin" width="15" maxlength="15" required placeholder="Логин 'алфавит и цифры'"> </label><br>
+        <label>Пароль для входа:
+            <input type="password" name="newPass" maxlength="10" required placeholder="Новый пароль 'цифры и алфавит'" width="10"> </label><br>
+            <label>Эл почта:
+            <input type="email" name="newEmail" maxlength="25" required placeholder=" Ваш email" width="10"> </label> 
+            <label>Подтверждена: <input type="radio" name="newConfirm"  value="1">Да  
+            <input type="radio" name="newConfirm"  value="1">Нет</label><br>
+            <label>Доступ : <input type="radio" name="newPriv" value="0">Студент
+            <input type="radio" name="newPriv"  value="2">Преподаватель</label><br>
+            <p>: <input type="text" name="surname" placeholder="Фаимлия"> : <input type="text" name="name" placeholder="Имя"> :<input type="text" name="middlename" placeholder="Отчество"></p>
+        <input type="hidden" name="new" value="1">
+        <input type="submit" value="Добавить"> </fieldset>
+</form>

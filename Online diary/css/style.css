@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 1040px) {
+    .padding-site {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .content .middle img {
+        width: 150px;
+    }
+    .header .logo {
+    float: left;
+    width: 200px;
+    height: 35px;
+    margin-left: 2%;
+    margin-top: 1%;
+    }
+    .SiteHeading {
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 30px;
+        color: silver;
+        text-shadow: 1px 1px 2px black, 0 0 1em silver;
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1041px) {
+    .padding-site {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .content .middle img {
+        width: 300px;
+    }
+        .header .logo {
+    float: left;
+    width: 300px;
+    height: 35px;
+    margin-left: 2%;
+    margin-top: 1%;
+    }
+        .SiteHeading {
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 30px;
+        color: silver;
+        text-shadow: 1px 1px 2px black, 0 0 1em silver;
+        font-size: 30px;
+    }
+}
+
+body,
+html {
+    height: 100%;
+    min-width: 480px;
+}
+
+.clear-fix:after {
+    clear: both;
+    display: table;
+    content: "";
+}
+
+.clear {
+    height: 20px;
+}
+
+
+/*        Заголовок и навигация        */
+
+.selected {
+    border-bottom: 1px solid skyblue;
+}
+
+.header {
+    position: relative;
+    height: 80px;
+    background-color: blue;
+}
+
+
+
+.header ul {
+    float: right;
+    margin-right: 15px;
+}
+
+.header .menu {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.menu .link {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+}
+
+.header .menu:hover {
+    border-bottom: 1px solid skyblue;
+}
+
+
+/*            Контент                  */
+
+.container {
+    min-height: 100%;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px #CCC;
+}
+
+.container .content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+            .content .middle img {
+                float: left;
+                margin-right: 50px;
+            }
+            .content .middle h3 {
+                text-align: center;
+            }
+            .content .top-content, .authWrap {
+                margin-top: 5px;
+            }
+
+form fieldset, legend {
+                background-color: lightcyan;
+                font-size: 12px;
+                padding-left: 10px;
+                padding-right: 10px;
+}
+form legend {
+    padding-right: 10px;
+}
+form input:last-child {
+                margin-bottom: 3px;
+}
+form label {
+    margin-left: 10px;
+}
+form input[type="radio"] {
+    margin-left: 5px;
+}
+.regButton {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 24px;
+    color: skyblue;
+}
+.regButton:hover {
+    color: blue;
+}
+.errorMsg {
+    text-align: center;
+    line-height: 34px;
+    color: red;
+    
+}
+.successMsg {
+    text-align: center;
+    line-height: 34px;
+    color: green;
+    
+}
+            .content .tasksWrap {
+                position: relative;
+            }
+@media screen and (max-width: 1040px) {
+
+.tasks {
+            width: 100%;
+        border-collapse: collapse;
+		border-spacing: 10px;  
+        margin-top: 2px;
+}
+
+.tasks .headTask {
+        width: auto;
+    background-color: blue;
+    color:aliceblue;
+}
+
+.tasks  .oneTask {
+        width: auto;
+    font-size: 12px;
+        background-color: white;
+}
+
+.tasks  td {
+        width: auto;
+    border: 1px solid #000;
+    text-align: center;
+}
+.tasks .headTask td {
+font-size: 18px;
+}
+}
+
+@media screen and (min-width: 1041px) {
+
+.tasks {
+            width: 100%;
+        border-collapse: collapse;
+		border-spacing: 10px;  
+    margin-top: 5px;
+}
+
+.tasks .headTask {
+        width: auto;
+    background-color: blue;
+    color:aliceblue;
+}
+
+.tasks  .oneTask {
+        width: auto;
+        background-color: white;
+}
+
+.tasks  td {
+        width: auto;
+    border: 1px solid #000;
+    text-align: center;
+}
+.tasks .headTask td {
+font-size: 24px;
+}
+}
+.tasks  .oneTask:hover {
+        background-color: blue;
+    cursor: pointer;
+}
+        taskForm {
+            width: inherit
+            margin: 0 auto;
+           
+        }
+        .taskBody ,.answerBody {
+            margin-top: 15px;
+            padding-top: 10px;
+        }
+        .taskBody ,.answerBody p {
+font-size: 16px;
+        }
+        .taskBody {
+            background-color: azure;
+            padding-bottom: 5px;
+        }
+        .taskBody .taskLegend {
+            background-color: azure;
+            font-size: 18px;
+        }
+        .answerBody {
+             background-color: azure;
+        }
+        .answerBody .answerLegend {
+             background-color: azure;
+            font-size: 14px;
+        }
+        .textTask, .answer {
+            resize: none;
+        }
+        .decriptionTask {
+    float: left;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-top: 10px;
+            width: 300px;
+}
+        .answerBody div {
+            float: left;
+                margin-left: 2%;
+    margin-right: 2%;
+    padding-top: 10px;
+        }
+        
+#Basket {
+        border-collapse: collapse;
+		border-spacing: 10px;
+}
+
+#Basket td {
+    line-height: 20px;
+	padding-left; 10px;
+    padding-right: 10px;
+	vertical-align: middle;
+	text-align: center;
+    column-width: 150px;
+}
+
+#Basket tr:first-child {
+		height: 60px;
+}
+#Basket tr:first-child td {
+
+    	border: 1px solid #000;
+        line-height: 50px;
+}
+#Basket tr:last-child {
+		height: 20px;
+    	border: 1px solid #000;
+}
+#Basket tr:last-child td:first-child {
+        text-align: left;
+        font-style: oblique;
+}
+.buttonsBasket {
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: o 5px;
+}
+.Delete {
+    color: red;
+}
+
+.textTeacherName {
+    border: none;
+    text-align: center;
+}
+.textTeacherName:focus {
+    outline: none;
+}
+.inputText {
+        border: none;
+    text-align: right;
+    background-color: transparent;
+}
+.inputText:focus {
+    outline: none;
+}
+
+.buttonsBasket {
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+.Delete {
+    color: red;
+}
+.Tables {
+        width: 100%;
+        border-collapse: collapse;
+		border-spacing: 2px;
+}
+
+.Tables td {
+    width: auto;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+
+/*            Подвал                   */
+
+.footer {
+    height: 20px;
+    margin-top: -20px;
+    background-color: blue;
+    clear: both;
+    color: aliceblue;
+}

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <title>API server КЗС</title>
+  </head>
+  <body>
+   <div class="container-lg" style="background-color: #e3f2fd;">
+  <header>      <h1 class="display-1 text-center">server API для обработки запросов</h1>
+          <div class="row row-cols-3">
+    <div class="col-lg bg-light text-center">React Js / Ajax / Vue.js</div>
+    <div class="col-lg bg-light text-center">запрос Json</div>
+    <div class="col-lg bg-light text-center">ответ Json с сервера PHP</div>
+  </div>
+  </header>
+  <br>
+  <div class="row row-cols-1">
+  <div class="col">
+  <div id="Users">
+<form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">Используйте : ivan@gamle.ru и 1234</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="button" class="btn btn-primary" onclick="login('Users','GET','exampleInputEmail1','exampleInputPassword1')">Submit</button>
+</form>  </div>
+</div></div><br>
+<br><br><br>
+          <div class="row clearfix">
+    <div class="col-lg bg-light text-center"><h2> Запросы методом POST:</h2>
+    <ul>
+    <li>{ "Table": "Users", "action": "login", "question" : "32dgd5345gdf63", "email" : "ivan@gamle.ru", "pass" : "1234" }</li> 
+    <li>{ "Table": "Users", "action": "logout"}</li>
+    <li>{ "Table": "Users", "action": "getUsers"}</li>
+    <li>{ "Table": "Users", "action": "getUser", "id":"2"}</li>
+    <li>{ "Table": "Tasks", "action": "getTasks"}</li>
+    <li>{ "Table": "Tasks", "action": "getTask", "id":"3"}</li>
+    <li>{ "Table":"Answers","action": "getAnswers"}</li>
+    <li>{ "Table":"Answers","action": "getAnswer","id":"3"}</li>
+    <li>{
+"Table": "Tasks",<br>
+"action": "Insert",<br>
+"question": "3187b1703c3b9b19bb63c027d8efc2f1",<br>
+"task_name" : "Задание для выпонения Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis a veritatis earum.",<br>
+"task_description": "Краткое Описание Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis a veritatis earum.",<br>
+"task_body": "Task - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto iusto, dolor facere maxime doloremque, est ut quos atque error sint alias quod libero voluptas labore harum aut.",<br>
+"user_id": "7",<br>
+"subject_id": "3"
+}</li>
+   <li>
+{
+"Table": "Tasks",<br>
+"action": "Update",<br>
+"question": "3187b1703c3b9b19bb63c027d8efc2f1",<br>
+"id" : "28",<br>
+"task_name" : "Вносим изменения  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis a veritatis earum.",<br>
+"task_description": "Краткое Описание Вносим изменения  Lorem ipsum dolor sit amet, consectetur adipisicing elit.",<br>
+"task_body": "Task - Lorem ipsum dolor sit amet"
+}
+   </li>
+    </ul>
+   
+    </div>
+    <div class="col-lg bg-light text-center">Просмотреть ответы сервера в <br> <a href="data/query_log.html">log журнале</a></div>
+    <div class="col-lg bg-light text-center">GET используйте конструкции:
+    <a href="https://api-data.webpeternet.com/?Table=Users&action=getUsers">https://api-data.webpeternet.com/?Table=Users&action=getUsers</a> 
+    </div>
+    <div class="col-lg bg-light text-center">Для теста POST запросов используйте - <a href="https://web.postman.co/">Postman</a></div>
+  </div>
+   </div>
+  
+
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+        <script src="jquery-3.5.1.min.js"></script>
+    <script src="test.js"></script>
+    <script src="controller.js"></script>
+  </body>
+</html>

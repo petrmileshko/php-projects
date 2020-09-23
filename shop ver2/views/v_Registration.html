@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>
+        <?=$title?>
+    </title>
+    <link rel="stylesheet" href="/assets/css/styles.css"> </head>
+
+<body class="padding-site">
+    <div class="container">
+        <header>
+            <div class="logo">
+                <?=$siteName?>
+            </div>
+            <nav class="navWrap">
+                <?=$menu?>
+            </nav>
+        </header>
+        <div class="content">
+            <form action="" method="post">
+                <fieldset>
+                    <legend>
+                       Регистрация на сайте </legend>
+                    <label>Имя для входа:
+                        <input type="text" name="newLogin" width="15" maxlength="15" required placeholder="Логин 'алфавит и цифры'"> </label>
+                    <br>
+                    <label>Пароль для входа:
+                        <input type="password" name="newPass" maxlength="10" required placeholder="Новый пароль 'цифры и алфавит'" width="10"> </label>
+                    <br>
+                    <label>Эл почта:
+                        <input type="email" name="newEmail" maxlength="25" required placeholder=" Ваш email" width="10"> </label>
+                    <p>:
+                        <input type="text" name="surname" placeholder="Фаимлия" required> :
+                        <input type="text" name="name" placeholder="Имя" required> :
+                        <input type="text" name="middlename" placeholder="Отчество" required>
+                    </p>
+                    <p>
+                    <label>Контактный телефоны:
+                    <input type="text" name="pic_phone" width="15" maxlength="15" required placeholder="+7 999 700 50 00">
+                    </label> 
+                    </p>
+                    <input type="hidden" name="act" value="complete">
+                    <input type="hidden" name="c" value="User">
+                    <input type="submit" value="Регистрация">
+                    <input type="reset" value="Очистить">
+                </fieldset></form>
+                <?php if( $content and is_string($content) ): ?>
+            <span> <?=$content?></span>
+            <?php endif; ?>    
+        </div>
+        <div class="clear-fix"></div>
+        <div class="clear"></div>
+    </div>
+    <footer>
+        Все права защищены &copy;<?=$footer?>
+    </footer>
+</body>
+
+</html>

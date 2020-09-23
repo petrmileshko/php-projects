@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>
+        <?=$title?>
+    </title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="assets/scripts/scripts.js"></script>
+     </head>
+<body class="padding-site">
+    <div class="container">
+        <header>
+            <div class="logo">
+                <?=$siteName?>
+            </div>
+            <nav class="navWrap">
+                <?=$menu?>
+            </nav>
+        </header>
+        <div class="content">
+       
+           <?php if( $content and is_string($content) ): ?>
+            <span> <?=$content?></span>
+            <?php endif; ?>
+            <p>/ PHP ООП/ Фреймворк ver 1.0 - архитектурная модель проектирования MVC / </p>
+        </div>
+        <div class="clear-fix"></div>
+        <div class="clear"></div>
+    </div>
+    <footer>
+        Все права защищены &copy;<?=$footer?>
+    </footer>
+</body>
+
+</html>

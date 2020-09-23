@@ -1,0 +1,34 @@
+<form action="" method="post" >
+    <fieldset>
+        <legend>Заказ No {Order_id}</legend>
+        <label>Фамилия:
+            <input type="text" name="Surname" width="15" maxlength="15" required placeholder="кириллица">
+        </label><br>
+        <label>Имя:
+            <input type="text" name="Firstname" width="15" maxlength="15" required placeholder="кириллица">
+        </label><br>
+        <label>Отчество:
+            <input type="text" name="Middlename" width="15" maxlength="15" required placeholder="кириллица">
+        </label>
+        <p>Общая сумма заказа: <span class="formsSpan">{Ammount} {Currency}</span></p>
+        <fieldset>
+        <legend>Адрес доставки</legend>
+        <label>Почтовый Индекс:
+            <input type="text" name="postCode" width="15" maxlength="15" required placeholder="">
+        </label><br>
+          <label>Почтовый адрес:<br>
+            <textarea name="Address" cols="30" rows="3" maxlength="400" required placeholder="Страна, область, город, улица и номер дома"></textarea>
+        </label><br>
+        <label>Дополнительная информации для курьера:<br>
+            <textarea name="addInfo" cols="30" rows="3" maxlength="400" required placeholder="максимум 400 символов"></textarea>
+        </label><br>
+        <label>Согласие на обработку личных данных:
+            <input type="checkBox" name="dataConfirm" required value="1">
+        </label>
+        </fieldset>
+        <p>{Basket}</p>
+        <input type="hidden" name="order_id" value="{Order_id}">
+        <input type="hidden" name="account" value="12">
+        <input type="submit" value="Оформить доставку">
+        <input type="reset" value="Очистить"> </fieldset>
+</form>

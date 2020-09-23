@@ -1,0 +1,22 @@
+<form action="" method="post" >
+    <fieldset>
+        <legend>Добавление нового товара</legend>
+        <label>Название товара:
+            <input type="text" name="nameProduct" width="15" maxlength="15" required placeholder="алфавит и цифры">
+        </label>
+        <label><select name="imgProduct" required>
+        <option value="" disabled selected>Изображение</option>
+        
+        {Options}
+
+        </select></label>
+        <label>Описание:
+            <textarea name="productDisc" cols="30" rows="1" maxlength="400" required placeholder="максимум 400 символов"></textarea>
+        </label>
+        <label>Цена:
+            <input type="text" name="productPrice" maxlength="10" required placeholder="цифры" width="10">
+        </label>
+        <input type="hidden" name="account" value="11">
+        <input type="submit" value="Добавить">
+        <input type="reset" value="Очистить"> </fieldset>
+</form>

@@ -1,0 +1,768 @@
+@font-face {
+    font-family: Huntsman;
+    src: url('../fonts/Huntsman.otf');
+}
+
+@font-face {
+    font-family: Exo;
+    src: url('../fonts/Exo.otf');
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url('../fonts/OpenSans.ttf');
+}
+
+body,
+html {
+    height: 100%;
+    min-width: 480px;
+        color: #5e5e5e;
+    font-family: "Open Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 684px) {
+    .padding-site {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .shopUnit img {
+    width: 100%;
+   /* height: 131px; */
+    }
+    .buttonsBasket {
+    border-collapse: collapse;
+    font-size: 10px;
+    margin: 0 1px;
+}
+}
+
+@media screen and (min-width: 685px) {
+    .padding-site {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .shopUnit img {
+    width: 100%;
+   /* height: 231px; */
+    }
+    .buttonsBasket {
+    border-collapse: collapse;
+    font-size: 12px;
+    margin: 0 5px;
+}
+}
+
+
+.clear-fix:after {
+    clear: both;
+    display: table;
+    content: "";
+}
+
+.clear {
+    height: 300px;
+}
+
+
+/*        Заголовок и навигация        */
+
+.selected {
+    border-bottom: 1px solid skyblue;
+}
+@media screen and (max-width: 1300px) {
+
+                header {
+                    position: relative;
+                    width: 100%;
+                    height: 30px;
+                    padding: 10px 0;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                    background: url('/images/promo/promo.jpg') no-repeat;
+                    background-size: 100%;
+                }
+
+                #headerInside {
+                    width: 480px;
+                    margin: 0 auto;
+                }
+
+                #logo {
+                    width: 30px;
+                    height: 30px;
+                    float: left;
+                    background: url('/images/system/origami-logo.svg') no-repeat;
+                    background-size: contain;
+                }
+
+                #companyName {
+                    text-align: right;
+                    font-family: Huntsman, sans-serif;
+                    float: left;
+                    margin-left: 5px;
+                    font-size: 0.9em;
+                    line-height: 30px;
+                    color: #fff;
+                }
+
+                #navWrap {
+                    height: 30px;
+                    float: right;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                }
+
+                #navWrap a {
+                    display: block;
+                    font-family: "Open Sans", sans-serif;
+                    color: #fff;
+                    font-size: 12px;
+                    text-decoration: none;
+                    border-left: 1px solid rgba(255, 255, 255, 0.1);
+                    border-right: 1px solid rgba(255, 255, 255, 0.1);
+                    padding: 0 10px;
+                    height: 50px;
+                    line-height: 50px;
+                }
+
+                #navWrap a:hover {
+                    background: #5e5e5e;
+                }
+
+                #navWrap a:last-child {
+                    border-left: none;
+                }
+
+
+}
+
+@media screen and (min-width: 1305px) {
+
+                header {
+                    position: relative;
+                    width: 100%;
+                    height: 50px;
+                    padding: 10px 0;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                    background: url('/images/promo/promo.jpg') no-repeat;
+                    background-size: 100%;
+                }
+
+                #headerInside {
+                    width: 1100px;
+                    margin: 0 auto;
+                }
+
+                #logo {
+                    width: 50px;
+                    height: 50px;
+                    float: left;
+                    background: url('/images/system/origami-logo.svg') no-repeat;
+                    background-size: contain;
+                }
+
+                #companyName {
+                    text-align: right;
+                    font-family: Huntsman, sans-serif;
+                    float: left;
+                    margin-left: 15px;
+                    font-size: 1.3em;
+                    line-height: 50px;
+                    color: #fff;
+                }
+
+                #navWrap {
+                    height: 50px;
+                    float: right;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                }
+
+                #navWrap a {
+                    display: block;
+                    font-family: "Open Sans", sans-serif;
+                    color: #fff;
+                    text-decoration: none;
+                    border-left: 1px solid rgba(255, 255, 255, 0.1);
+                    border-right: 1px solid rgba(255, 255, 255, 0.1);
+                    padding: 0 20px;
+                    height: 70px;
+                    line-height: 70px;
+                }
+
+                #navWrap a:hover {
+                    background: #5e5e5e;
+                }
+
+                #navWrap a:last-child {
+                    border-left: none;
+                }
+
+
+}
+
+/* -------------------- НАЧАЛО стилей для главной страницы --------------------- */
+
+#promo {
+    background: url('/images/promo/promo.jpg') no-repeat;
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    margin-top: -71px;
+    float: left;
+}
+
+#promoText {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    color: #fff;
+    font-family: Exo, sans-serif;
+    font-size: 2em;
+    word-spacing: 8px;
+}
+#promo p {
+    margin-left: 2%;
+        color: #fff;
+    font-size: 12px;
+    font-family: Exo, sans-serif;
+    word-spacing: 2px;
+}
+.promoTextUl {
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 5%;
+    font-size: 10px;
+    color: #fff;
+    font-family: Exo, sans-serif;
+    word-spacing: 2px;
+}
+#mainTextWrap {
+    width: 100%;
+    float: left;
+}
+
+
+@media screen and (max-width: 1394px) {
+            #mainText {
+                width: 480px;
+                margin: 10px auto;
+                text-align: justify;
+            }
+
+}
+
+@media screen and (min-width: 1395px) {
+            #mainText {
+                width: 1100px;
+                margin: 40px auto;
+                text-align: justify;
+            }
+
+}
+
+
+@media all and (min-width: 1500px) {
+    #promo {
+        height: 800px;
+    }
+}
+
+/* ----------------- КОНЕЦ стилей для главной страницы ---------------------- */
+
+
+/*            Контент                  */
+
+.container {
+    min-height: 100%;
+}
+
+
+@media screen and (max-width: 1394px) {
+#content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+}
+
+@media screen and (min-width: 1395px) {
+#content {
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+}
+
+            #content .middle img {
+                float: left;
+                margin-right: 50px;
+            }
+            #content .middle h3 {
+                text-align: center;
+            }
+            #content .top-content {
+                margin-top: 5px;
+            }
+
+form fieldset, legend {
+                color: #e6e09a;
+                background-color: #696969;
+                font-size: 12px;
+                padding-left: 10px;
+                padding-right: 10px;
+}
+form legend {
+    padding-right: 10px;
+}
+form input:last-child {
+                margin-bottom: 3px;
+}
+form label {
+    margin-left: 10px;
+}
+form input[type="radio"] {
+    margin-left: 5px;
+}
+.regButton {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 24px;
+    color: skyblue;
+}
+.regButton:hover {
+    color: blue;
+}
+.errorMsg {
+    text-align: center;
+    line-height: 34px;
+    color: red;
+    
+}
+.successMsg {
+    text-align: center;
+    line-height: 34px;
+    color: green;
+    
+}
+
+ 
+/* ------------------ НАЧАЛО стилей для главной страницы магазниа ---------------------- */
+
+#shopWrap {
+    width: 100%;
+    float: left;
+}
+
+
+
+
+
+@media screen and (max-width: 1144px) {
+                .shopUnit {
+                    float: left;
+                    width: 28%;
+                    padding: 5px;
+                    border: 1px solid rgba(225, 225, 225, 0.7);
+                    margin-right: 4%;
+                    margin-bottom: 20px;
+                }
+                .shopUnitName {
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 10px;
+                    font-family: Exo, sans-serif;
+                    font-size: 0.9em;
+                }
+
+
+
+                .shopUnitShortDesc {
+                    text-align: left;
+                    margin-top: 10px;
+                    font-size: 10px
+                }
+
+                .shopUnitPrice {
+                    text-align: right;
+                    padding-right: 20px;
+                    margin-top: 10px;
+                    color: #6a6747;
+                    font-weight: bold;
+                    font-size: 12px;
+                }
+
+                .shopUnitMore {
+                    border: none;
+                    padding: 5px 15px;
+                    display: block;
+                    margin-top: 20px;
+                    text-align: center;
+                    color: #e6e09a;
+                    background-color: #696969;
+                    text-decoration: none;
+                    font-size: 12px;
+                }
+}
+
+@media screen and (min-width: 1144px) {
+                .shopUnit {
+                    float: left;
+                    width: 28%;
+                    padding: 5px;
+                    border: 1px solid rgba(225, 225, 225, 0.7);
+                    margin-right: 5%;
+                    margin-bottom: 20px;
+                }
+                .shopUnitName {
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 10px;
+                    font-family: Exo, sans-serif;
+                    font-size: 1.2em;
+                }
+                .shopUnitShortDesc {
+                    text-align: left;
+                    margin-top: 10px;
+                }
+
+                .shopUnitPrice {
+                    text-align: right;
+                    padding-right: 20px;
+                    margin-top: 10px;
+                    color: #6a6747;
+                    font-weight: bold;
+                }
+
+                .shopUnitMore {
+                    border: none;
+                    padding: 5px 15px;
+                    display: block;
+                    margin-top: 20px;
+                    text-align: center;
+                    color: #e6e09a;
+                    background-color: #696969;
+                    text-decoration: none;
+                }
+}
+               .shopUnit:nth-child(3n) {
+                    margin-right: 0;
+                } 
+
+.shopUnitMore:hover {
+    color: #fff;
+    background-color: #777777;
+}
+
+/* ------------------ КОНЕЦ стилей для главной старницы магазина -------------------------- */
+
+/* ---------------- НАЧАЛО стилей для страницы с открытым товаром ----------------------- */
+
+#openedProduct-img {
+    float: left;
+    width: 30%;
+    margin-right: 3%;
+}
+
+#openedProduct-img img {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid rgba(225, 225, 225, 0.7);
+}
+
+#openedProduct-content {
+    float: left;
+    width: 67%;
+}
+
+#openedProduct-name {
+    font-family: Exo, sans-serif;
+    font-size: 2em;
+    margin-top: 0;
+}
+
+#openedProduct-desc {
+    margin-top: 20px;
+}
+
+#openedProduct-price {
+    margin-top: 10px;
+    color: #6a6747;
+    font-weight: bold;
+}
+
+/* ---------------- КОНЕЦ стилей для страниы с открытым товаром -------------------------- */
+
+#Basket {
+        border-collapse: collapse;
+		border-spacing: 10px;
+}
+
+#Basket td {
+    line-height: 20px;
+	padding-left; 10px;
+    padding-right: 10px;
+	vertical-align: middle;
+	text-align: center;
+    column-width: 150px;
+}
+
+#Basket tr:first-child {
+		height: 60px;
+}
+#Basket tr:first-child td {
+
+    	border: 1px solid #000;
+        line-height: 50px;
+}
+#Basket tr:last-child {
+		height: 20px;
+    	border: 1px solid #000;
+}
+#Basket tr:last-child td:first-child {
+        text-align: left;
+        font-style: oblique;
+}
+
+.Delete {
+    color: red;
+}
+.quantityProduct {
+    border: none;
+    text-align: center;
+}
+.quantityProduct:focus {
+    outline: none;
+}
+.priceProduct {
+    border: none;
+    text-align: center;
+}
+.priceProduct:focus {
+    outline: none;
+}
+.inputText {
+        border: none;
+    text-align: right;
+    background-color: transparent;
+}
+.inputText:focus {
+    outline: none;
+}
+
+.Table {
+        width: 100%;
+        border-collapse: collapse;
+		border-spacing: 2px;
+        background-color: whitesmoke;
+}
+
+.Table td {
+    width: auto;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+.Table img {
+    width: 100px;
+}
+
+/*            Подвал                   */
+
+@media screen and (max-width: 1395px) {
+
+
+                footer {
+                    float: left;
+                    width: 100%;
+                    height: 300px;
+                    margin-top: -300px;
+                    background: url('/images/system/promo.jpg');
+                    color: #fff;
+                }
+
+                #footerInside {
+                    position: relative;
+                    width: 480px;
+                    margin: 0 auto;
+                    height: 80%;
+                }
+
+                #copyrights {
+                    position: absolute;
+                    bottom: 5px;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 10px;
+                }
+
+                #social {
+                    padding-top: 10px;
+                    width: 100%;
+                    height: 20px;
+                    position: absolute;
+                    bottom: 20px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    border-top: 1px solid rgba(255, 255, 255, 0.1);
+                }
+
+                .socialItem {
+                    width: 20px;
+                    height: 20px;
+                    margin: 0 2px;
+                }
+
+                #contacts {
+                    position: absolute;
+                    left: 0;
+                    top: 15px;
+                    width: 140px;
+                }
+
+                .contactWrap {
+                    float: left;
+                    width: 100%;
+                    margin-bottom: 10px;
+                    line-height: 20px;
+                    font-size: 12px;
+                }
+
+                .contactIcon {
+                    width: 20px;
+                    height: 20px;
+                    float: left;
+                    margin-right: 5px;
+                }
+
+                #footerNav {
+                    position: absolute;
+                    right: 0;
+                    top: 25px;
+                   
+                }
+
+                #footerNav a {
+                    display: block;
+                    text-align: right;
+                    color: #e6e09a;
+                    margin-bottom: 5px;
+                    text-decoration: none;
+                    font-size: 12px;
+                }
+
+
+             .Auth {
+                 font-size: 10px;
+                margin-top: 15px;
+                 color: cornsilk;
+             }
+
+}
+
+@media screen and (min-width: 1396px) {
+
+
+    footer {
+        float: left;
+        width: 100%;
+        height: 300px;
+        margin-top: -300px;
+        background: url('/images/system/promo.jpg');
+        color: #fff;
+    }
+
+    #footerInside {
+        position: relative;
+        width: 1100px;
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    #copyrights {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #social {
+        padding-top: 20px;
+        width: 100%;
+        height: 40px;
+        position: absolute;
+        bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .socialItem {
+        width: 40px;
+        height: 40px;
+        margin: 0 5px;
+    }
+
+    #contacts {
+        position: absolute;
+        left: 0;
+        top: 25px;
+        width: 340px;
+    }
+
+    .contactWrap {
+        float: left;
+        width: 100%;
+        margin-bottom: 10px;
+        line-height: 40px;
+    }
+
+    .contactIcon {
+        width: 40px;
+        height: 40px;
+        float: left;
+        margin-right: 10px;
+    }
+
+    #footerNav {
+        position: absolute;
+        right: 0;
+        top: 45px;
+        width: 200px;
+    }
+
+    #footerNav a {
+        display: block;
+        text-align: right;
+        color: #e6e09a;
+        margin-bottom: 10px;
+        text-decoration: none;
+    }
+
+     .Auth {
+         font-size: 14px;
+        margin-top: 5px;
+         color: cornsilk;
+    }
+
+}
+#footerNav a:hover {
+    color: #fff;
+}
+ .socialItem:hover {
+    cursor: pointer; 
+    }

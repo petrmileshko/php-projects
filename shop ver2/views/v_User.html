@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>
+        <?=$title?>
+    </title>
+    <link rel="stylesheet" href="/assets/css/styles.css"> </head>
+
+<body class="padding-site">
+    <div class="container">
+        <header>
+            <div class="logo">
+                <?=$siteName?>
+            </div>
+            <nav class="navWrap">
+                <?=$menu?>
+            </nav>
+        </header>
+        <div class="content"><?php if($_SESSION['basket']): ?><a href="?c=Catalog&act=order" class="BasketLink"><div id="BasketWrap"><img src="/assets/images/basket.jpeg" alt="Корзина"><div id="Basket">
+          <p>Всего покупок: <?=count($_SESSION['basket'])?> поз.</p>
+          <p>На общую сумму: <?=$_SESSION['basketAmount']?> $</p>
+            </div></div> </a> <?php endif; ?>
+           <div>
+           <?php if( $content and is_array($content) ): ?>
+           <p>
+            Пользователь :
+                      <i><?=$content['login']?></i>  <br>
+            ФИО :           
+                   <i><?=$content['pic']?></i>     <br>
+            Эл. почта:           
+                   <i><?=$content['email']?></i>     <br>
+            Почта подтверждена:
+            <i> <?=($content['confirm'])? 'Да':'Нет'; ?></i> <br>
+             Статус:
+                    <i><?=($content['priv_status'])? 'Администратор':'Обычный'; ?></i><br>
+            Контактный телефон :           
+                   <i><?=$content['pic_phone']?></i>     <br></p>
+            
+                <?php endif; ?> 
+                <?php if( $content and is_string($content) ): ?>
+            <span> <?=$content?></span>
+            <?php endif; ?>    
+<form action="" method="post">
+                    <input type="hidden" name="act" value="logout">
+                    <input type="hidden" name="c" value="User">
+       <input type="submit" value="Выйти"></form>       
+        </div></div>
+        <div class="clear-fix"></div>
+        <div class="clear"></div>
+    </div>
+    <footer>
+        Все права защищены &copy;<?=$footer?>
+    </footer>
+</body>
+
+</html>

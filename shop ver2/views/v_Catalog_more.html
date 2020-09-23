@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>
+        <?=$title?>
+    </title>
+    <link rel="stylesheet" href="/assets/css/styles.css"> </head>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/assets/scripts/scripts.js"></script>
+<body class="padding-site">
+    <div class="container">
+        <header>
+            <div class="logo">
+                <?=$siteName?>
+            </div>
+            <nav class="navWrap">
+                <?=$menu?>
+            </nav>
+        </header>
+        <div class="content">     <a href="?c=Catalog&act=order" class="BasketLink"><div id="BasketWrap"><img src="/assets/images/basket.jpeg" alt="Корзина"><div id="Basket"><?php if($_SESSION['basket']): ?>
+          <p>Всего покупок: <?=count($_SESSION['basket'])?> поз.</p>
+          <p>На общую сумму: <?=$_SESSION['basketAmount']?> $</p>
+           <?php endif; ?> </div></div> </a>       <div id="shopWrap">
+        <?php if( $content and is_array($content) ): ?>
+        <div id="openedProduct-img">
+               
+                <img src="<?=$content['img']?>">
+            </div>
+
+            <div id="openedProduct-content">
+                <h1 id="openedProduct-name">
+                    <?=$content['name']?>
+                </h1>
+                <div id="openedProduct-desc">
+                    <?=$content['descrip']?>
+                </div>
+                <div class="shopUnitAdd"><input type="button" onclick="controller('Basket','add','<?=$content['id']?>')" value=" + " title="Добавить в корзину"></div>
+                <div id="openedProduct-price">
+                    Цена: <?=$content['price']?> $
+                </div>
+            </div>
+            <?php endif; ?> 
+            <?php if( $content and is_string($content) ): ?>
+            <span> <?=$content?></span>
+            <?php endif; ?> 
+</div>  
+        </div>
+        <div class="clear-fix"></div>
+        <div class="clear"></div>
+    </div>
+    <footer>
+        Все права защищены &copy;<?=$footer?>
+    </footer>
+</body>
+
+</html>

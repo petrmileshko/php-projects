@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>
+        <?=$title?>
+    </title>
+    <link rel="stylesheet" href="/assets/css/styles.css"> </head>
+
+<body class="padding-site">
+    <div class="container">
+        <header>
+            <div class="logo">
+                <?=$siteName?>
+            </div>
+            <nav class="navWrap">
+                <?=$menu?>
+            </nav>
+        </header>
+        <div class="content">     <div id="shopWrap">
+        <form action="" method="post" >
+    <fieldset>
+        <legend>Заказать товары</legend>
+        <label>Контактное лицо:
+            <input type="text" name="pic" width="15" maxlength="15" required value="<?=( $_SESSION['user'] )? $_SESSION['user']['pic']: '' ?>" placeholder="ИМЯ">
+        </label><br>
+        <label>Контактный телефоны:
+            <input type="text" name="pic_phone" width="15" maxlength="15" required placeholder="+7 999 700 50 00" value="<?=( $_SESSION['user'] )? $_SESSION['user']['pic_phone']: '' ?>">
+        </label>
+        <label>Согласие на обработку личных данных:
+            <input type="checkBox" name="dataConfirm" required value="1">
+        </label>
+        </fieldset>
+                <table class="Tables">
+            <tr><td>Модель</td><td>Количество</td><td>Цена</td><td>Сумма</td></tr>
+        <?php if( $content and is_array($content) ) foreach ($content as $key=>$item): ?>
+
+
+            <tr>
+            <td> <?=$key?> </td><td> <?=$item['quantity']?></td><td> <?=$item['price']?> $</td><td> <?=$item['price']*$item['quantity']?> $</td>
+            </tr>
+            <?php $amount += $item['price']*$item['quantity']?>
+                <?php endforeach; ?>
+                       
+                <?php if( $amount>0 ): ?>
+                <tr><td colspan="4">Общая сумма заказа:  <span><?=$amount?> $</span></td></tr>
+               
+                <?php endif; ?> 
+                  </table>
+                <?php if( $content and is_string($content) ): ?>
+            <span> <?=$content?></span>
+            <?php endif; ?>  
+            
+
+           <br>
+        <input type="hidden" name=" act" value="orderConfirmed">
+        <input type="hidden" name="c" value="Main">
+        <input type="submit" value="Оформить заказ">
+</form>
+<form action="" method="post"><input type="hidden" name=" act" value="orderCancel">
+        <input type="hidden" name="c" value="Main"><input type="submit" value="Очистить"></form>
+</div>  
+        </div>
+        <div class="clear-fix"></div>
+        <div class="clear"></div>
+    </div>
+    <footer>
+        Все права защищены &copy;<?=$footer?>
+    </footer>
+</body>
+
+</html>

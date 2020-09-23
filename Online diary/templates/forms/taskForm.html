@@ -1,0 +1,19 @@
+     <form action="" name="Ans" method="post" class="taskForm" enctype="multipart/form-data">
+    <fieldset class="taskBody">
+        <legend class="taskLegend">{Subject}</legend>
+        <p>Преподаватель : {Teacher}</p>
+        <div class="decriptionTask">{Description}</div>
+        <textarea class="textTask" name="" cols="40" rows="10" readonly title="Текст задания">{Task}</textarea>
+        <p><a href="{File}" target="_blank">{Download}</a></p>
+    </fieldset>
+    <fieldset class="answerBody">
+        <legend class="answerLegend">{Student}</legend>
+        <div><p>Введите ответ:</p></div><textarea name="answer" r rows="10" required title="Разместите свой ответ тут">Поместите свой ответ сюда максимум 1000 символов</textarea>
+        <p>Или</p>
+        <label>Загрузите файл с ответом:<input type="file" name="answerFile" required></label>
+        <p><input type="submit" value="Отправить на проверку"></p> 
+        
+    </fieldset>    
+</form>
+
+  

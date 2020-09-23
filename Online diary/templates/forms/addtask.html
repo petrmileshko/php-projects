@@ -1,0 +1,25 @@
+<form action="" method="post" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Добавление нового задания</legend>
+        <label>Предмет:
+        <select name="subject"><option value="">Список предметов</option>{Options}</select>
+        </label>
+        <label>Название задания:
+            <input type="text" name="nameTask" width="15" maxlength="15" required placeholder="....">
+        </label>
+        <label>Краткое описание задания:
+            <textarea name="taskDescription" cols="30" rows="1"  required></textarea>
+        </label><br>
+        <label>Текст задания:
+            <textarea name="taskBody" cols="30" rows="1"></textarea>
+        </label><br>
+        <label>Файл с заданием(если есть):
+            <input type="file" name="fileTask">
+        </label>
+        <label>Преподаватель:
+            {Teacher}
+        </label>
+        <input type="hidden" name="account" value="3">
+        <input type="submit" value="Добавить">
+        <input type="reset" value="Очистить"> </fieldset>
+</form>
