@@ -12,3 +12,6 @@
 верстка первая - http://webpeternet.com/portfolio/1/index.html
 
 верстка вторая - http://pegasus-adpt.webpeternet.com/
+
+папка gallery - http://gallery.webpeternet.com/
+
