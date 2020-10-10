@@ -1,0 +1,354 @@
+@font-face {
+    font-family: Huntsman;
+    src: url('../fonts/Huntsman.otf');
+}
+
+@font-face {
+    font-family: Exo;
+    src: url('../fonts/Exo.otf');
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url('../fonts/OpenSans.ttf');
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?maxgjx');
+  src:  url('fonts/icomoon.eot?maxgjx#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?maxgjx') format('truetype'),
+    url('fonts/icomoon.woff?maxgjx') format('woff'),
+    url('fonts/icomoon.svg?maxgjx#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-heart:before {
+  content: "\e9da";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 840px) {
+    .padding-site {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media screen and (min-width: 841px) {
+    .padding-site {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+body,
+html {
+    height: 100%;
+    min-width: 640px;
+}
+
+.clear-fix:after {
+    clear: both;
+    display: table;
+    content: "";
+}
+
+.clear {
+    height: 20px;
+}
+
+header {
+    padding-left: 35px;
+    padding-right: 2%;
+    padding-top: 20px;
+    height: 60px;
+    color: silver;
+    background-color: dimgray;
+}
+
+.logo {
+    display: 
+    float: left;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.container {
+    min-height: 100%;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px #CCC;
+}
+.container   .content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 1%;
+    }
+.Wrap {
+    float: right;
+    margin-top: 12px;
+}
+.Wrap a {
+    text-decoration: none;
+    color: lightgray;
+}
+.Wrap a:hover {
+    color: cadetblue; 
+}
+footer {
+    font-size: 14px;
+    color: silver;
+    height: 20px;
+    margin-top: -20px;
+    background-color: dimgray;
+    clear: both;
+    text-align: center;
+}
+
+.imagesWrap {
+    width: 100%;
+    float: left;
+ /*  margin-left: 1%;
+  margin-right: 1%; */
+    margin-top: 10px; 
+}
+
+.imageWrap {
+    float: left;
+    width: 28%;
+    padding: 5px;
+    border: 1px solid rgba(225, 225, 225, 0.7);
+    margin-right: 4.8%;
+    margin-bottom: 20px;
+}
+
+.imageWrap:nth-child(3n) {
+    margin-right: 0;
+}
+
+.imageName {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-family: Exo, sans-serif;
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 1049px) {
+.imageWrap img {
+    width: 100%;
+    height: 231px;
+}
+}
+
+@media screen and (min-width: 1050px) {
+.imageWrap img {
+    width: 100%;
+    height: 331px;
+}
+}
+
+
+
+.imageWrapFull {
+    width: 97%;
+    padding: 5px;
+    border: 1px solid rgba(225, 225, 225, 0.7);
+}
+
+.imageWrapFull img {
+    width: 100%;
+}
+.viewsNumber {
+    text-align: justify;
+    margin-top: 10px;
+    float: left;
+    color: #6a6747;
+    font-weight: bold;
+}
+
+.likesNumber {
+    text-align: right;
+    padding-right: 20px;
+    margin-top: 10px;
+    color: #6a6747;
+    font-weight: bold;
+}
+
+.viewLink {
+    border: none;
+    padding: 5px 15px;
+    display: block;
+    color: #e6e09a;
+    text-decoration: none;
+}
+
+.viewLink:hover {
+outline: 1px solid blue;
+}
+    .buttonLike {
+        width: 28px;
+        height: 28px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        letter-spacing: 5.6px;
+        display: inline-block;
+        background-color: whitesmoke;
+        border-radius: 50%;
+        margin: 0 auto;
+              text-shadow: 1px 1px 2px black, 0 0 1em silver;
+    }
+    
+    .buttonLike:hover {
+        color: red;
+    }
+    
+    .buttonLike span {
+        letter-spacing: 0;
+        font-weight: 600;
+    }
+.errorMsg {
+    text-align: center;
+    line-height: 34px;
+    color: red;
+    
+}
+.successMsg {
+    text-align: center;
+    line-height: 34px;
+    color: green;
+    
+}
+
+@media screen and (max-width: 840px) {
+    
+            .shopUnit {
+                float: left;
+                width: 16%;
+                padding: 5px;
+                border: 1px solid rgba(225, 225, 225, 0.7);
+                margin-right: 1.365%;
+                margin-bottom: 20px;
+            }
+
+            .shopUnit:nth-child(5n) {
+                margin-right: 0;
+            }
+
+            .shopUnitName {
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+                font-family: Exo, sans-serif;
+                font-size: 1em;
+            }
+
+            .shopUnit img {
+                width: 100%;
+                height: 20px;
+            }
+
+            .shopUnitShortDesc {
+                text-align: justify;
+                margin-top: 10px;
+                font-size: 10px;
+            }
+
+            .shopUnitPrice {
+                text-align: right;
+                padding-right: 10px;
+                margin-top: 10px;
+                color: #6a6747;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+}
+
+@media screen and (min-width: 841px) {
+
+            .shopUnit {
+                float: left;
+                width: 16%;
+                padding: 5px;
+                border: 1px solid rgba(225, 225, 225, 0.7);
+                margin-right: 1.365%;
+                margin-bottom: 20px;
+            }
+
+            .shopUnit:nth-child(5n) {
+                margin-right: 0;
+            }
+
+            .shopUnitName {
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+                font-family: Exo, sans-serif;
+                font-size: 1.2em;
+            }
+
+            .shopUnit img {
+                width: 100%;
+                height: 50px;
+            }
+
+            .shopUnitShortDesc {
+                text-align: justify;
+                margin-top: 10px;
+                font-size: 12px;
+            }
+
+            .shopUnitPrice {
+                text-align: right;
+                padding-right: 20px;
+                margin-top: 10px;
+                color: #6a6747;
+                font-weight: bold;
+                font-size: 14px;
+            }
+
+}
+
+#shopWrap {
+    width: 100%;
+    float: left;
+}
+
+.shopUnitMore {
+    border: none;
+    padding: 5px 15px;
+    background-color: #696969;
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #e6e09a;
+    text-decoration: none;
+}
+
+.shopUnitMore:hover {
+    color: #fff;
+    background-color: #777777;
+}

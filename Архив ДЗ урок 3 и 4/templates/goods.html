@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <?=$title?>
+    </title>
+    <link rel="stylesheet" href="/assets/css/styles.css"> </head>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="assets/scripts/scripts.js"></script>
+<body class="padding-site">
+    <div class="container">
+        <header>
+            <div class="logo">
+                <?=$title?>
+            </div>
+            <nav class="Wrap">
+                <?=$menu?>
+            </nav>
+        </header>
+        <div class="content">
+           <div id="shopWrap">            <h1>
+                Каталог товаров
+            </h1>
+            <div>
+            <?php if($goods) foreach ($goods as $good): ?>
+
+                <div class="shopUnit">
+                    <img src="<?php echo $good['img']; ?>" />
+
+                    <div class="shopUnitName">
+                       <?php echo $good['name']; ?>
+                    </div>
+                    <div class="shopUnitShortDesc">
+                       <?php echo $good['descrip']; ?>
+                    </div>
+                    <div class="shopUnitPrice">
+                        Цена: <?php echo $good['price']; ?>
+                    </div>
+                    <a href="?id=<?=$good['id']?>">
+                        Подробнее
+                    </a>
+                </div>
+                <?php endforeach; ?>            	
+            </div></div>
+        </div>
+        <div class="clear-fix"></div>
+        <div class="clear"></div>
+    </div>
+    <footer>
+        <?=$footer?>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<div class="imagesWrap">
+           
+            <?php foreach ($images as $image): ?>
+
+                <div class="imageWrap">
+                <a href="?image=<?=$image['path']?>&name=<?=$image['name']?>&id=<?=$image['id']?>" class="viewLink">
+
+                    <img src="<?=$image['path']?>" /></a>
+
+                    <div class="imageName">
+                       <?=$image['name']?>
+                    </div>
+                    <div class="viewsNumber">
+                       Views: <?=$image['visited']?>
+                    </div>
+                    <div class="likesNumber">
+                        Likes: <?=$image['liked']?>
+                    </div>
+                    
+                </div>
+                <?php endforeach; ?>
+</div>          	

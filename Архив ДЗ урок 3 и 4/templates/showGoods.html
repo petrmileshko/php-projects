@@ -1,0 +1,24 @@
+           <h1>
+                Каталог товаров
+            </h1>
+            <div>
+            <?php if($goods) foreach ($goods as $good): ?>
+
+                <div class="shopUnit">
+                    <img src="<?php echo $good['img']; ?>" />
+
+                    <div class="shopUnitName">
+                       <?php echo $good['name']; ?>
+                    </div>
+                    <div class="shopUnitShortDesc">
+                       <?php echo $good['descrip']; ?>
+                    </div>
+                    <div class="shopUnitPrice">
+                        Цена: <?php echo $good['price']; ?>
+                    </div>
+                    <a href="?id=<?=$good['id']?>">
+                        Подробнее
+                    </a>
+                </div>
+                <?php endforeach; ?>            	
+            </div>
