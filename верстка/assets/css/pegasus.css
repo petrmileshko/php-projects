@@ -1,0 +1,1412 @@
+@font-face {
+    font-family: Romul;
+    src: url('/assets/fonts/ofont.ru_Romul.ttf');
+}
+@font-face {
+    font-family: Montserrat;
+    src: url('/assets/fonts/Montserrat-Medium.ttf');
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/assets/fonts/icomoon.eot?eickcg');
+  src:  url('/assets/fonts/icomoon.eot?eickcg#iefix') format('embedded-opentype'),
+    url('/assets/fonts/icomoon.ttf?eickcg') format('truetype'),
+    url('/assets/fonts/icomoon.woff?eickcg') format('woff'),
+    url('/assets/fonts/icomoon.svg?eickcg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-facebook:before {
+  content: "\e900";
+  /*color: #999999; */
+}
+.icon-google-plus:before {
+  content: "\e901";
+  /*color: #999999;*/
+}
+.icon-instagram:before {
+  content: "\e902";
+  /*color: #999999;*/
+}
+.icon-linkedin:before {
+  content: "\e903";
+  /*color: #999999;*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    height: 100%;
+    min-width: 400px;
+}
+.menu {
+    display: none;
+}
+.padding-site {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.clear-fix:after {
+    clear: both;
+    display: table;
+    content: "";
+}
+
+.clear {
+    height: 338px;
+}
+
+/* Style for Header */
+
+header {
+    width: 1920px;
+    height: 174px;
+}
+
+header .upBar {
+            position: relative;
+            width: 1200px;
+            height: 114px;
+            /*outline: 1px solid black;*/
+            margin-left: 360px;
+            padding-top: 15px;
+}
+
+        .upBar .rect {
+                float: left;
+                width: 548px;
+                height: 2px;
+                margin-top: 10px;
+                border-bottom: 1px solid #2f2c34;
+        }
+        .upBar .rect:first-child {
+                margin-right: 104px;
+        }
+        .upBar .logo {
+                width: 213px;
+                height: 82px;
+                margin-left: 493px;
+                background-image: url('/assets/1920/logo.png');
+                background-position: top;
+                background-repeat: no-repeat;
+                }
+        .upBar .buttons {
+                width: 1200px;
+                height: 40px;
+                margin-top: -46px;
+                background: transparent;
+                }
+                .buttons .left-part {
+                            position: relative;
+                            width: 389px;
+                            height: 33px;
+                            }
+                         .left-part .first {
+                                        float: left;
+                                        width: 155px;
+                                        height: 33px;
+                                        margin-left: 16px;
+                                        margin-top: 5px;
+                                    }
+                                    .first .phone {
+                                            width: 155px;
+                                            height: 13px;
+                                            color: #2f2c34;
+                                            font-family: Montserrat;
+                                            font-size: 16px;
+                                            font-style: medium;
+                                            font-weight: 500;
+                                            text-transform: uppercase;
+                                            letter-spacing: 1px;
+                                    }
+                                    .first .textUnder {
+                                            color: #d0aa8c;
+                                            font-family: Montserrat;
+                                            font-size: 10px;
+                                            font-weight: 500;
+                                            font-style: medium;
+                                            text-transform: uppercase;
+                                            letter-spacing: 0.63px;
+                                            margin-top: 12px;
+                                            margin-left: 1px;
+                                            padding-right: 5px;
+                                    }
+                                    .first .stripe {
+                                        float: right;
+                                        width: 39px;
+                                        height: 1px;
+                                        margin-top: 5px;
+                                        background-color: #d0aa8c;
+                                    }
+                        .left-part .second {
+                                        float: right;
+                                        width: 159px;
+                                        height: 31px;
+                                        margin-top: 4px;
+                                    }
+                                    .second .phone {
+                                            width: 158px;
+                                            height: 13px;
+                                            color: #2f2c34;
+                                            font-family: Montserrat;
+                                            font-size: 16px;
+                                            font-style: medium;
+                                            font-weight: 500;
+                                            letter-spacing: 1px;
+                                    }
+                                    .second .textUnder {
+                                            color: #d0aa8c;
+                                            font-family: Montserrat;
+                                            font-size: 10px;
+                                            font-weight: 500;
+                                            font-style: medium;
+                                            text-transform: uppercase;
+                                            letter-spacing: 0.63px;
+                                            margin-top: 10px;
+                                            padding-right: 5px;
+                                    }
+                                    .second .stripe {
+                                            float:right;
+                                            width: 38px;
+                                            height: 1px;
+                                            margin-top: 5px;
+                                            margin-top: 5px;
+                                            background-color: #d0aa8c;
+                                    }
+
+                .buttons .right-part {
+                            float: right;
+                            margin-top: -30px;
+                            }
+                .right-part .button-upBar {
+                                float: left;
+                                width: 186px;
+                                height: 30px;
+                                color: #2f2c34;
+                                outline: 1px solid #2f2c34;
+                }
+                .right-part .button-upBar:last-child {
+                                margin-right: 15px;
+                }          
+                .right-part .button-upBar:first-child {
+                                margin-right: 25px;
+                }
+                .right-part .button-upBar:hover {
+                                background-color: #d0aa8c;
+                                color: #ffffff;
+                                cursor: pointer;
+                }
+                            .button-upBar p {
+                                                font-family: Montserrat;
+                                                font-size: 13px;
+                                                font-weight: 500;
+                                                text-align: center;
+                                                text-transform: uppercase;
+                                                letter-spacing: 0.13px;
+                                                margin-top: 8px;
+                                            }
+
+header nav {
+    width: 1920px;
+    height: 60px;
+    background-image: url('/assets/1920/navbg.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    margin-top: -15px;
+}
+       nav ul {
+            position: relative;
+            margin-left: 373px;
+            width: 1169px;
+            height: 14px;
+       }
+        nav ul > li {
+            display: block;
+            float: left;
+            width: 149px;
+            height: 20px;
+            color: #ffffff;
+            font-family: Romul;
+            font-size: 15px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.36px;
+            border-right: 1px solid #ffffff;
+            margin-top: 20px;  
+        }
+        nav ul > li:nth-child(2) {
+            width: 203px;
+            text-align: center;
+        }
+        nav ul > li:nth-child(3) {
+            width: 229px;
+            text-align: center;
+        }
+        nav ul > li:nth-child(4) {
+            width: 222px;
+            text-align: center;
+        }
+        nav ul > li:nth-child(5) {
+            width: 193px;
+            text-align: center;
+        }
+        nav ul > li:nth-child(6) {
+            width: 164px;
+            border-right: none;
+            text-align: right;
+        }
+        nav ul > li:hover {
+            cursor: pointer;
+            color: #d0aa8c;
+        }
+
+/* Style for Content */
+
+.container {
+    width: 1920px;
+    min-height: 100%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px #CCC;
+    background-image: url('/assets/1920/bodybg.png');
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.container .content {
+    width: 1920px;
+    height: 1956px;
+    background-image: url('/assets/1920/bkground.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    padding-top: 12px;
+}
+            .content .crumbs-wrap {
+                width: 1170px;
+                height: 21px;
+                margin: 0 auto;
+                margin-bottom: 30px;
+            }
+                    .crumbs-wrap .crumbs {
+                        width: 222px;
+                        height: 10px;
+                        margin: 0 auto;
+                    }
+                                .crumbs a {
+                                    display: block;
+                                    float: left;
+                                    color: #332f36;
+                                    font-family: Montserrat;
+                                    font-size: 10px;
+                                    font-weight: 500;
+                                    text-transform: uppercase;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    border-right: 1px solid black;
+                                    padding: 0px 6px 0px;
+                                }
+                                .crumbs a:hover {
+                                    color: #d0aa8c;
+                                }
+                                .crumbs a:nth-child(3) {
+                                    border-right: none;
+                                }
+            .content .hline {
+                width: 1170px;
+                height: 2px;
+                background-color:  #2f2c34;
+                opacity: 0.1;
+                margin-top: 10px;
+            }
+
+            .content .heading {
+                width: 460px;
+                height: 60px;
+                margin: 0 auto;
+            }
+                    .heading .brandname {
+                                color: #2f2c34;
+                                font-family: Montserrat;
+                                font-size: 17px;
+                                font-weight: 400;
+                                text-transform: uppercase;
+                                letter-spacing: 1px;
+                                text-align: center;
+                                margin-bottom: 10px;
+                    }
+                    .heading .h-group {
+
+                    }
+                                .h-group .figure-line {                                            
+                                            width: 80px;
+                                            height: 2px;
+                                            background-color: #d0aa8c;
+                                            float: left;
+                                            margin-top: 19px;
+                                }
+                                .h-group .figure-line:first-child {                                            
+                                            margin-right: 18px;
+                                }
+                                .h-group .figure-line:last-child {                                            
+                                            margin-left: 18px;
+                                }
+                                .h-group .text-heading {
+                                            width: 264px;
+                                            height: 33px;
+                                            color: #2f2c34;
+                                            font-family: Romul;
+                                            font-size: 38px;
+                                            font-weight: 400;
+                                            text-transform: uppercase;
+                                            float: left;
+                                }
+
+                     .content .text-paragraph {
+                                    width: 742px;
+                                    height: 96px;
+                                    margin: 0 auto; 
+                                    padding-top: 32px;
+                    }
+                               .text-paragraph p {
+                                            color: #343434;
+                                            font-family: Montserrat;
+                                            font-size: 13px;
+                                            font-weight: 500;
+                                            line-height: 16.67px;
+                                            letter-spacing: 0.75px;
+                                            text-align: center;
+                              }
+
+            .content .blocks {
+                        position: relative;
+                        width: 1170px;
+                        height: 100%;
+                        margin: 0 auto;
+                        padding-top: 52px;
+            }
+                     .blocks .block {
+                                width: 555px;
+                                height: 505px;
+                                float: left;
+                                margin-right: 60px;
+                                margin-top: 43px;
+                     }
+                     .blocks .block:nth-child(2n) {
+                                margin-right: 0px;
+                     }
+                     .blocks .block:first-child {
+                                margin-top: 0px;
+                     }
+                     .blocks .block:nth-child(2) {
+                                margin-top: 0px;
+                     }
+                             .block img {
+                                     background-color: #2f2c34;
+                             }
+                             .block img:hover {
+                                     cursor: pointer;
+                             }
+                             .block .block-heading {
+                                            color: #2f2c34;
+                                            font-family: Romul;
+                                            font-size: 25px;
+                                            font-weight: 400;
+                                            line-height: 16.67px;
+                                            letter-spacing: 1.5px;
+                                            text-align: center;
+                                            margin-top: 25px;
+                                            margin-bottom: 27px;
+                             }
+                             .block .block-line {
+                                        width: 90px;
+                                        height: 1px;
+                                        background-color: #d0aa8c;
+                                        margin: 0 auto;
+                             }
+                             .block .block-text {
+                                        width: 555px;
+                                        height: 101px;
+                                        margin: 0 auto;
+                                        margin-top: 23px;
+                                        margin-bottom: 30px;
+                             }
+                                    .block-text p {
+                                                color: #2f2c34;
+                                                font-family: Montserrat;
+                                                font-size: 13px;
+                                                font-weight: 500;
+                                                text-align: center;
+                                                letter-spacing:  0px;
+                                    }                            
+                                    .block-text p:last-child {
+                                                margin-top: 12px;
+                                                letter-spacing: -0.2px;
+                                    }
+                                    .block-text p:first-child {
+                                                width: 555px;
+                                                letter-spacing: -0.1px
+                                    }
+                             .block .button-more {
+                                        width: 275px;
+                                        height: 29px;
+                                        outline: 2px solid black;
+                                        margin-top: 31px;
+                                        text-align: center;
+                                        color: #2f2c34;
+                                        font-family: Montserrat;
+                                        font-size: 15px;
+                                        font-weight: 500;
+                                        text-transform: uppercase;
+                                        letter-spacing: 0.87px;
+                                        padding-top: 11px;
+                                        margin: 0 auto;
+                             }
+                             .block .button-more:hover {
+                                        background-color: #d0aa8c;
+                                        color: #ffffff;
+                                        cursor: pointer;
+                             }
+
+
+/* Style for Footer */
+
+footer {
+    width: 1920px;
+    height: 338px;
+    margin-top: -338px;
+    background-image: url('/assets/1920/footbground.png');
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+footer .foot-up {
+    position: relative;
+    height: 201px;
+    margin-left: 381px;
+    padding-top: 39px;
+}
+        .foot-up .up-sections {
+                    float: left;
+        }
+        .foot-up .up-sections:first-child {
+                    width: 242px;
+        }
+        .foot-up .up-sections:nth-child(3) {
+                    width: 261px;
+                    margin-left: 83px;
+        }
+        .foot-up .up-sections:nth-child(5) {
+                    width: 238px;
+                    margin-left: 81px;
+        }
+                 .up-sections .section-heading {
+                                height: 15px;
+                                color: #ffffff;
+                                font-family: Romul;
+                                font-size: 19px;
+                                font-weight: 400;
+                                text-transform: uppercase;
+                        }
+                 .up-sections .section-separator {
+                                width: 68px;
+                                height: 2px;
+                                background-color: #d0aa8c;
+                                margin-top: 19px;
+                                margin-bottom: 33px;
+                        }
+                 .up-sections ul {
+                               
+                        }
+                 .up-sections ul>li {
+                                display: block;
+                                height: 12px;
+                                color: #ffffff;
+                                font-family: Montserrat;
+                                font-size: 15px;
+                                font-weight: 400;
+                                text-decoration: none;
+                                margin-bottom: 12px;
+                                opacity: 0.6;
+                        }
+                 .up-sections ul>li:last-child {
+                                 margin-bottom: 0px;
+                        }
+                 .up-sections ul>li:hover {
+                                opacity: 1;;
+                                cursor: pointer;
+                        }
+        .foot-up .v-line {
+                    float: left;
+                    width: 1px;
+                    height: 132px;
+                    background-color: #ffffff;
+                    opacity: 0.5;
+                    margin-top: 70px;
+        }
+        .foot-up .v-line:nth-child(6) {
+                    height: 201px;
+                    margin-top: 0px;
+        }
+        .foot-up .last {
+                    position: relative;
+                    float: left;
+                    margin-left: 73px;
+                    width: 186px;
+        }
+                    .last .section-buttons {
+                            width: 186px;
+                    }
+                            .section-buttons .button-order, .button-rates {
+                                height: 25px;
+                                opacity: 0.6;
+                                color: #ffffff;
+                                font-family: Montserrat;
+                                font-size: 17px;
+                                font-weight: 500;
+                                text-transform: uppercase;
+                                letter-spacing: 1px;
+                                border-bottom: 2px solid #ffffff;
+                                text-align: center;
+                                margin-bottom: 17px;
+                            }
+                            .section-buttons .button-order:hover {
+                                opacity: 1;
+                                letter-spacing: 0.17px;
+                                cursor: pointer;
+                            }
+                            .section-buttons .button-rates:hover {
+                                opacity: 1;
+                                letter-spacing: 0.17px;
+                                cursor: pointer;
+                            }
+                    .last .section-contacts {
+                            height: 120px;
+                            background-image: url('/assets/1920/contactsbg.png');
+                            background-position: left;
+                            background-repeat: no-repeat;
+                    }
+                            .section-contacts .h24 {
+                                
+                            }
+                                                .h24 p:first-child {
+                                                    height: 12px;
+                                                    color: #ffffff;
+                                                    font-family: Montserrat;
+                                                    font-size: 17px;
+                                                    font-weight: 500;
+                                                    letter-spacing: -0.33px;
+                                                    padding-top: 13px;
+                                                    padding-left: 18px;
+                                                }
+                                                .h24 p:last-child {
+                                                    height: 6px;
+                                                    color: #9a9a9a;
+                                                    font-family: Montserrat;
+                                                    font-size: 8px;
+                                                    font-weight: 500;
+                                                    text-transform: uppercase;
+                                                    letter-spacing: 0.5px;
+                                                    padding-top: 6px;
+                                                    padding-left: 80px;
+                                                }
+                            .section-contacts .viber-whatsup {
+                            }
+                                                .viber-whatsup p:first-child {
+                                                                height: 12px;
+                                                                color: #ffffff;
+                                                                font-family: Montserrat;
+                                                                font-size: 17px;
+                                                                font-weight: 500;
+                                                                letter-spacing: 0.25px;
+                                                                padding-top: 10px;
+                                                                padding-left: 18px;
+                                                }
+                                                .viber-whatsup p:last-child {
+                                                                height: 6px;
+                                                                color: #9a9a9a;
+                                                                font-family: Montserrat;
+                                                                font-size: 8px;
+                                                                font-weight: 500;
+                                                                text-transform: uppercase;
+                                                                letter-spacing: 0.5px;
+                                                                padding-top: 6px;
+                                                                padding-left: 80px;
+                                                }
+                            .section-contacts .socials {
+                                                width: 160px;
+                                                height: 28px;
+                                                margin-top: 9px;
+                                                margin-left: 18px;
+                            }
+                                              .socials span {
+                                                        float: left;
+                                                        width: 28px;
+                                                        height: 28px;
+                                                        font-size: 28px;
+                                                        color: #999999;
+                                                        margin-right: 12px;
+                                                        border-radius: 4px;
+                                                        opacity: 0.5;
+                                                }
+                                              .socials span:last-child {
+                                                        margin-right: 0px;
+                                                }
+                                              .socials span:hover {
+                                                        color: #d0aa8c;
+                                                        cursor: pointer;
+                                                }
+                                              .socials span:nth-child(3):hover {
+                                                        color: #363534;
+                                                        background-color: #d0aa8c;
+                                                        cursor: pointer;
+                                                }
+                                              .socials span:nth-child(1):hover {
+                                                        color: #363534;
+                                                        background-color: #d0aa8c;
+                                                        cursor: pointer;
+                                                }
+
+footer .foot-lower {
+        width: 965px;
+        height: 15px;
+        opacity: 0.3;
+        color: #ffffff;
+        font-family: Montserrat;
+        font-size: 15px;
+        font-weight: 400;
+        margin-left: 381px;
+        margin-top: 49px;
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+    width: 768px;
+    height: 132px;
+    }
+    header .upBar {
+            width: 80%;
+            height: fit-content;
+            margin: 0 auto;
+            padding-top: 5px;
+            }
+            .upBar .rect {
+                width: 219px;
+            }
+            .upBar .rect:first-child {
+                    margin-right: 26%;
+            }
+            .upBar .logo {
+                margin-left: 197px;
+                }
+            .upBar .buttons {
+                            width: 600px;
+                            height: 80px;
+                            margin-top: -64px;
+                        }
+                        .buttons .left-part {
+                                    width: 155px;
+                                    }
+                                 .left-part .first {
+                                                display: inline-block;
+                                                width: 116px;
+                                                margin-left: 18px;
+                                            }
+                                            .first .phone {
+                                                    width: 116px;
+                                                    height: 10px;
+                                                    font-size: 11px;
+                                            }
+                                            .first .textUnder {
+                                                        font-size: 7px;
+                                                        margin-top: 3px;
+                                                        padding-right: 11px;
+                                            }
+                                            .first .stripe {
+                                                        width: 25px;
+                                                        margin-top: 5px;
+                                            }
+                                .left-part .second {
+                                                float: left;
+                                                margin-left: 18px;
+                                                width: 116px;
+                                            }
+                                            .second .phone {
+                                                    width: 116px;
+                                                    height: 10px;
+                                                    font-size: 11px;
+                                            }
+                                            .second .textUnder {
+                                                        font-size: 7px;
+                                                        margin-top: 3px;
+                                                        padding-right: 11px;
+                                            }
+                                            .second .stripe {
+                                                        width: 25px;
+                                                        margin-top: 5px;
+                                            }
+
+                        .buttons .right-part {
+                                    margin-top: -38px;
+                                    }
+                        .right-part .button-upBar {
+                                        float: none;
+                                        width: 72px;
+                                        height: 24px;
+                                        margin-right: 18px;
+                        }
+                        .right-part .button-upBar:last-child {
+
+                        }          
+                        .right-part .button-upBar:first-child {
+
+                        }
+                                    .button-upBar p {
+                                                        font-size: 7px;
+                                                        padding-top: 8px;
+                                                    }
+    header nav {
+        width: 768px;
+        height: 36px;
+        margin-top: 1px;
+    }
+           nav ul {
+                margin: 0 auto;
+                width: 70%;
+                padding-top: 3px;
+           }
+            nav ul > li {
+                width: 60px;
+                height: 10px;
+                font-size: 10px;
+                margin-top: 6px;
+                padding-right: 9px;
+            }
+            nav ul > li:nth-child(2) {
+                width: 81px;
+            }
+            nav ul > li:nth-child(3) {
+                width: 92px;
+            }
+            nav ul > li:nth-child(4) {
+                width: 89px;
+            }
+            nav ul > li:nth-child(5) {
+                width: 77px;
+            }
+            nav ul > li:nth-child(6) {
+                width: 66px;
+                padding-left: 12px;
+            }
+    
+    .container {
+        width: 768px;
+        height: 2120px;
+        background-image: url('/assets/768/bodybg.png');
+    }
+
+    .container .content {
+        width: 768px;
+        height: 1578px;
+        background-image: url('/assets/768/bkground.png');
+        padding-top: 3px;
+    }
+                .content .crumbs-wrap {
+                    width: 468px;
+                    margin-bottom: 10px;
+                }
+                        .crumbs-wrap .crumbs {
+                        width: 186px;
+                        height: 8px;
+                    }
+                                .crumbs a {
+                                    font-size: 6px;
+                                    padding: 0px 6px 0px;
+                                } 
+                .content .hline {
+                    width: 468px;
+                    margin-top: 3px;
+                }
+
+                        .heading .brandname {
+                                    color: #2f2c34;
+                                    font-family: Montserrat;
+                                    font-size: 15px;
+                                    font-weight: 400;
+                                    text-transform: uppercase;
+                                    letter-spacing: 1px;
+                                    text-align: center;
+                                    margin-bottom: 10px;
+                        }
+
+                                    .h-group .text-heading {
+                                                width: 264px;
+                                                height: 33px;
+                                                font-size: 34px;
+                                                text-align: center;
+                                    } 
+
+                         .content .text-paragraph {
+                                        width: 90%;
+                                        margin-top: 20px;
+
+                        }
+                                   .text-paragraph p {
+                                                font-size: 13px;
+                                                line-height: 16.67px;
+                                  }
+                .content .blocks {
+                            width: 90%;
+                            padding-top: 12px;
+                }
+                         .blocks .block {
+                                    width: 48%;
+                                    height: 25%;
+                                    margin-right: 18px;
+                                    margin-top: 43px;
+                         }
+                                 .block img {
+                                        width: 331px;
+                                 }
+                                 .block .block-heading {
+                                            font-size: 12px;
+                                            margin-top: 16px;
+                                            margin-bottom: 16px;
+                                 }
+                                 .block .block-text {
+                                            width: 222px;
+                                             margin-bottom: 46px
+                                 }
+                                        .block-text p {
+                                                    font-size: 9px;
+                                        }                            
+                                        .block-text p:first-child {
+                                                    width: 222px;
+                                                    margin-bottom: 9px;
+                                        }
+                                .block .button-more {
+                                            width: 200px;
+                                            height: 20px;
+                                            margin-top: 31px;
+                                            font-size: 12px;
+                                            padding-top: 3px;
+                                 }
+    
+    footer {
+        width: 768px;
+        height: 136px;
+        margin-top: -136px;
+        background-image: url('/assets/768/footbground.png');
+    }
+
+    footer .foot-up {
+        height: 80px;
+        margin-left: 16%;
+        padding-top: 5px;
+    }
+
+        .foot-up .up-sections {
+                    float: left;
+        }
+        .foot-up .up-sections:first-child {
+                    width: 110px;
+        }
+        .foot-up .up-sections:nth-child(3) {
+                    width: 120px;
+                    margin-left: 43px;
+        }
+        .foot-up .up-sections:nth-child(5) {
+                    width: 98px;
+                    margin-left: 41px;
+        }
+                 .up-sections .section-heading {
+                                height: 2px;
+                                font-size: 10px;
+                        }
+                 .up-sections .section-separator {
+                                    width: 62px;
+                                    margin-top: 14px;
+                                    margin-bottom: 4px;
+                        }
+                 .up-sections ul {
+                               
+                        }
+                 .up-sections ul>li {
+                                height: 9px;
+                                font-size: 8px;
+                                margin-bottom: 0px;
+                        }
+        .foot-up .v-line {
+                    height: 47px;
+                    margin-top: 30px;
+        }
+        .foot-up .v-line:nth-child(6) {
+                        height: 76px;
+                        margin-top: 2px;
+        }
+        .foot-up .last {
+                    margin-left: 33px;
+                    width: 75px;
+        }
+                    .last .section-buttons {
+                            width: 75px;
+                    }
+                            .section-buttons .button-order, .button-rates {
+                                height: 10px;
+                                font-size: 6px;
+                                margin-bottom: 3px;
+                            }
+                    .last .section-contacts {
+                            width: 75px;
+                            height: 49px;
+                            background-image: url('/assets/768/contactsbg.png');
+                    }
+                            .section-contacts .h24 {
+                                
+                            }
+                                                .h24 p:first-child {
+                                                        height: 4px;
+                                                        font-size: 7px;
+                                                        padding-top: 0px;
+                                                        padding-left: 8px;
+                                                }
+                                                .h24 p:last-child {
+                                                        height: 3px;
+                                                        font-size: 4px;
+                                                        padding-top: 5px;
+                                                        padding-left: 23px;
+                                                }
+                            .section-contacts .viber-whatsup {
+                            }
+                                                .viber-whatsup p:first-child {
+                                                        height: 4px;
+                                                        font-size: 7px;
+                                                        padding-top: 1px;
+                                                        padding-left: 8px;
+                                                        letter-spacing: -0.1px;
+                                                }
+                                                .viber-whatsup p:last-child {
+                                                        height: 3px;
+                                                        font-size: 4px;
+                                                        padding-top: 5px;
+                                                        padding-left: 23px;
+                                                }
+                            .section-contacts .socials {
+                                                width: 75px;
+                                                height: 14px;
+                                                margin-top: 6px;
+                                                margin-left: 5px;
+                            }
+                                              .socials span {
+                                                        float: left;
+                                                        width: 14px;
+                                                        height: 14px;
+                                                        font-size: 12px;
+                                                        margin-right: 3px;
+
+                                                }
+
+    footer .foot-lower {
+        width: 490px;
+        height: 8px;
+        font-size: 7px;
+        margin-left: 16%;
+        margin-top: 20px;
+    }
+    .clear {
+    height: 136px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    header {
+    width: 480px;
+    height: 138px;
+    }
+    header .upBar {
+            width: 80%;
+            height: fit-content;
+            margin: 0 auto;
+            padding-top: 5px;
+            }
+            .upBar .rect {
+                display: none;
+            }
+            .upBar .rect:first-child {
+            }
+            .upBar .logo {
+                    float: left;
+                    margin-left: 24%;
+                }
+        .upBar .buttons {
+                    display: none;
+                        }
+    header nav {
+        display: none;
+    width: 100%;
+    height: 37px;
+    margin-top: 90px;
+    background-color: black;
+    }
+           nav ul {
+                width: 98%;
+                margin: 0 auto;
+           }
+            nav ul > li {
+                width: auto;
+                height:11px;
+                font-size: 11px;
+                margin-top: 8px;
+                border: none;
+                margin-right: 1.5%;
+            } 
+    
+            nav ul > li:nth-child(2) {
+                width: auto;
+                margin-left: 5px;
+            }
+            nav ul > li:nth-child(3) {
+                width: auto;
+            }
+            nav ul > li:nth-child(4) {
+                width: auto;
+            }
+            nav ul > li:nth-child(5) {
+                width: auto;
+            }
+            nav ul > li:nth-child(6) {
+                width: auto;
+                margin-right: 0;
+            }
+    .container {
+        width: 480px;
+        height: auto;
+        background-color: white;
+    }
+
+    .container .content {
+        width: 99%;
+        height: auto;
+        background-image: url('/assets/576/bkground.png');
+        padding-top: 2px;
+    }
+                .content .crumbs-wrap {
+                    width: 99%;
+                    margin-bottom: 10px;
+                    margin: 0 auto;
+                }
+                        .crumbs-wrap .crumbs {
+                            display: none;
+                        width: 80%;
+                        height: 8px;
+                    }
+                                .crumbs a {
+                                    font-size: 6px;
+                                    padding: 0px 6px 0px;
+                                } 
+                .content .hline {
+                    width: 80%;
+                    margin-top: 3px;
+                    margin: 0 auto;
+                }
+                        .heading .brandname {
+                                    color: #2f2c34;
+                                    font-family: Montserrat;
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                    text-transform: uppercase;
+                                    letter-spacing: 1px;
+                                    text-align: center;
+                                    margin-bottom: 10px;
+                        }
+                                    .h-group .text-heading {
+                                                width: 264px;
+                                                height: 33px;
+                                                font-size: 34px;
+                                                text-align: center;
+                                    } 
+
+                         .content .text-paragraph {
+                                        width: 95%;
+                                        margin-top: 15px;
+
+                        }
+                                   .text-paragraph p {
+                                                    font-size: 12px;
+                                                    line-height: 13.67px;
+                                  }
+                .content .blocks {
+                            width: 98%;
+                            padding-top: 12px;
+                }
+                         .blocks .block {
+                                    width: 98%;
+                                    height: 30%;
+                                    margin-right: 0px;
+                                    margin-top: 20px;
+                         }
+    
+                     .blocks .block:first-child {
+                                margin-top: 20px;
+                     }
+                     .blocks .block:nth-child(2) {
+                                margin-top: 20px;
+                     }
+                                 .block img {
+                                        width: 98%;
+                                     margin-left: 2%;
+                                 }
+                                 .block .block-heading {
+                                        font-size: 16px;
+                                        margin-top: 12px;
+                                        margin-bottom: 12px;
+                                 }
+                                 .block .block-text {
+                                            width: 95%;
+                                            height: 80%;
+                                            margin-bottom: 15px
+                                 }
+                                        .block-text p {
+                                                    font-size: 11px;
+                                        }                            
+                                        .block-text p:first-child {
+                                                    width: auto;
+                                                    margin-bottom: 6px;
+                                        }
+                                .block .button-more {
+                                            width: 180px;
+                                            height: 20px;
+                                            margin-top: 16px;
+                                            font-size: 10px;
+                                            padding-top: 5px;
+                                            margin-bottom: 12px;
+                                 }
+    
+    footer {
+        width: 480px;
+        height: 136px;
+        margin-top: -136px;
+    }
+
+    footer .foot-up {
+        height: 80px;
+        margin-left: 5%;
+        padding-top: 5px;
+    }
+
+        .foot-up .up-sections {
+                    float: left;
+        }
+        .foot-up .up-sections:first-child {
+                    width: 100px;
+        }
+        .foot-up .up-sections:nth-child(3) {
+                    width: 110px;
+                    margin-left: 12px;
+        }
+        .foot-up .up-sections:nth-child(5) {
+                    width: 88px;
+                    margin-left: 11px;
+        }
+                 .up-sections .section-heading {
+                                height: 2px;
+                                font-size: 8px;
+                        }
+                 .up-sections .section-separator {
+                                    width: 62px;
+                                    margin-top: 14px;
+                                    margin-bottom: 4px;
+                        }
+                 .up-sections ul {
+                        }
+                 .up-sections ul>li {
+                                height: 9px;
+                                font-size: 8px;
+                                margin-bottom: 0px;
+                        }
+        .foot-up .v-line {
+
+                    height: 47px;
+                    margin-top: 30px;
+        } 
+        .foot-up .v-line:nth-child(6) {
+            
+                        height: 76px;
+                        margin-top: 2px;
+        }
+        .foot-up .last {
+            float: right;
+                    margin-right: 5%;
+                    width: 75px;
+        }
+                    .last .section-buttons {
+                            width: 90px;
+                    }
+                            .section-buttons .button-order, .button-rates {
+                                height: 10px;
+                                font-family: Romul;
+                                font-size: 5px;
+                                margin-bottom: 3px;
+                            }
+                    .last .section-contacts {
+                            width: 95px;
+                            height: 49px;
+                            background-image: url('/assets/768/contactsbg.png');
+                    }
+                            .section-contacts .h24 {
+                                
+                            }
+                                                .h24 p:first-child {
+                                                        height: 12px;
+                                                        font-size: 7px;
+                                                        padding-top: 0px;
+                                                        padding-left: 8px;
+                                                }
+                                                .h24 p:last-child {
+                                                        display: none;
+                                                }
+                            .section-contacts .viber-whatsup {
+                            }
+                                                .viber-whatsup p:first-child {
+                                                        height: 12px;
+                                                        font-size: 7px;
+                                                        padding-top: 1px;
+                                                        padding-left: 8px;
+                                                        letter-spacing: -0.1px;
+                                                }
+                                                .viber-whatsup p:last-child {
+                                                        display: none;
+                                                }
+                            .section-contacts .socials {
+                                                width: 75px;
+                                                height: 14px;
+                                                margin-top: 6px;
+                                                margin-left: 5px;
+                            }
+                                              .socials span {
+                                                        float: left;
+                                                        width: 14px;
+                                                        height: 14px;
+                                                        font-size: 12px;
+                                                        margin-right: 3px;
+
+                                                }
+    footer .foot-lower {
+        width: 80%;
+        height: 8px;
+        font-size: 7px;
+        margin-left: 5%;
+        margin-top: 20px;
+    }
+    .clear {
+    height: 136px;
+    }
+    		.menu-bar {
+		    position: absolute;
+		    right: 10px;
+		    top: 10px;
+		    width: 50px;
+		    height: 50px;
+		    cursor: pointer;
+		}
+		.menu-bar span, .menu-bar span:before, .menu-bar span:after {
+		    width: 100%;
+		    position: absolute;
+		    height: 10px;
+		    background: #333;
+		    display: block;
+		    transition: .3s;
+		    border-radius: 5px;
+
+		}
+		.menu-bar span:before{
+			content: "";
+			top: -20px;
+			transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+		}
+		.menu-bar span{
+			top: 20px;
+		}
+		.menu-bar span:after{
+			content: "";
+			bottom: -20px;
+			transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+		}
+
+		.menu-bar span.active:before{
+			content: "";
+			top: 0px;
+			transform: rotate(45deg);
+			transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0, 1.55);
+		}
+		.menu-bar span.active:after{
+			content: "";
+			bottom: 0;
+			transform: rotate(-45deg);
+			transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0, 1.55);
+		}
+		.menu-bar span.active{
+    		background: rgba(255, 255, 255, 0); 
+  		}
+		.menu ul{
+			list-style: none;
+		}
+    .menu ul li {
+            width: 149px;
+            height: 20px;
+            color: #ffffff;
+            font-family: Romul;
+            font-size: 15px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.36px;
+		}
+    .menu ul > li:hover {
+            cursor: pointer;
+            color: #d0aa8c;
+        }
+
+		.menu {
+            display: inherit;
+			width: 300px;
+			height: auto;
+			background: #333;
+			color: #ccc;
+			padding: 10px;
+			position: fixed;
+			left: -320px;
+			transition: left 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		}
+		.menu.animate{
+			left: 0;
+		}
+
+}
+@media(max-width: 380px){
+			.menu{
+			width: 220px;
+			}
+}
