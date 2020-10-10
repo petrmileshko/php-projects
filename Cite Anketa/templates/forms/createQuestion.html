@@ -1,0 +1,24 @@
+<!-- Форма для добавления вопроса в новую анкету  -->
+   <form action="" method="post">
+    <fieldset>
+        <legend><input type="radio" name="type" value="1" required> Вопрос с несколькими вариантами ответов</legend>
+        <br>
+        Вопрос: 
+            <input type="text" name="question" width="15" maxlength="225" placeholder="наберите вопрос"><br><br>
+        <select name="answerType">
+            <option disabled selected>Тип ответов</option>
+            <option value="1">один из списка</option>      <!-- Можно выбрать только один из перечисленных  -->
+            <option value="2">любой из списка</option> <!-- Можно выбрать несколько из перечисленных  -->
+        </select><br>
+                Поле для ввода ответов: <br>
+            <textarea name="answers"  cols="50" rows="2" placeholder="Вводите ответы через сепаратор /
+Ответ первый/Ответ второй/.../Ответ n-й"></textarea>
+    </fieldset>
+    <fieldset>
+        <legend><input type="radio" name="type" value="2" required> Вопрос с одним вариантом ответа</legend>
+        <br>
+        Вопрос: <br>
+            <input type="text" name="questionSingle" width="15" maxlength="225" placeholder="наберите вопрос"> Ответ будет набран пользователем<br><input type="hidden" name="account" value="4">
+    </fieldset>
+        <input type="submit" value="Добавить"><input type="submit" value="Очистить">
+   </form>

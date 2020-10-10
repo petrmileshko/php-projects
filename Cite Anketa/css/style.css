@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 500px) {
+    .padding-site {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .content .middle img {
+        width: 150px;
+    }
+}
+
+@media screen and (min-width: 525px) {
+    .padding-site {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .content .middle img {
+        width: 300px;
+    }
+}
+
+body,
+html {
+    height: 100%;
+    min-width: 470px;
+}
+
+.clear-fix:after {
+    clear: both;
+    display: table;
+    content: "";
+}
+
+.clear {
+    height: 20px;
+}
+
+
+/*        Заголовок        */
+
+
+.header {
+    position: relative;
+    height: 100px;
+    background-color: silver;
+}
+
+.header .logo {
+}
+
+.header h1 {
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 40px;
+}
+
+/*            Контент                  */
+
+.container {
+    min-height: 100%;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px #CCC;
+}
+
+.container .content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+            .content .middle img {
+                float: left;
+                margin-right: 50px;
+            }
+            .content .middle h3 {
+                text-align: center;
+            }
+            .content .top-content, .authWrap {
+                margin-top: 5px;
+            }
+
+form fieldset, legend {
+                background-color: beige;
+                font-size: 12px;
+                padding-left: 10px;
+}
+form legend {
+    padding-right: 10px;
+}
+form input:last-child {
+                margin-bottom: 3px;
+}
+form label {
+    margin-left: 10px;
+}
+.regButton {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 24px;
+    color: skyblue;
+}
+.regButton:hover {
+    color: blue;
+}
+.errorMsg {
+    text-align: center;
+    line-height: 34px;
+    color: red;
+    
+}
+.successMsg {
+    text-align: center;
+    line-height: 34px;
+    color: green;
+    
+}
+.questionsCreateButtons {      
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+.buttonsBasket {
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+.Delete {
+    color: red;
+}
+
+.Tables {
+        width: 100%;
+        border-collapse: collapse;
+		border-spacing: 2px;
+}
+
+.Tables td {
+    width: auto;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+
+ol {
+    margin-left: 10px;
+}
+
+/*            Подвал                   */
+
+.footer {
+    height: 20px;
+    margin-top: -20px;
+    background-color: silver;
+    clear: both;
+}
