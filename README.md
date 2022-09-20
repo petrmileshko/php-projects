@@ -3,7 +3,7 @@
 
 [REST API](https://api-data.webpeternet.com/readme.html)
 
-[верстка первая](http://interior.webpeternet.com/)
+[первая моя верстка - учебная](http://interior.webpeternet.com/)
 
-[верстка вторая](http://pegasus-adpt.webpeternet.com/)
+[верстка ретро](http://pegasus-adpt.webpeternet.com/)
 
