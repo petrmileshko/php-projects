@@ -3,16 +3,7 @@
 
 папка api  - https://api-data.webpeternet.com/readme.html
 
-папка Online diary - http://diaryonline.webpeternet.com/
-
-папка shop ver 1 - https://smartshop.webpeternet.com/
-
-папка shop ver2 - https://test.webpeternet.com/ 
-
-верстка первая - http://webpeternet.com/portfolio/1/index.html
+верстка первая - http://interior.webpeternet.com/
 
 верстка вторая - http://pegasus-adpt.webpeternet.com/
 
-папка gallery - http://gallery.webpeternet.com/
-
-папка Cite Anketa - https://anketa.webpeternet.com/
