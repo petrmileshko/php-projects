@@ -11,8 +11,10 @@
 * Online diary - исполнение заказа на [сайте fl.ru](https://www.fl.ru/users/mileshkopetr25/portfolio/) 
 
 ## Рабочие демоверсии на хостинге:
+* [Cite Anketa](https://anketa.webpeternet.ru/)
+* [Online diary](https://school.webpeternet.ru/)
 * [REST API](https://api-data.webpeternet.com/readme.html)
-* [первая моя верстка - учебная](http://interior.webpeternet.com/)
-* [верстка ретро](http://pegasus-adpt.webpeternet.com/)
+* [первая моя верстка - учебная](https://interior.webpeternet.com/)
+* [верстка ретро](https://pegasus-adpt.webpeternet.com/)
 
 Использование исходного кода из проектов возможно с указанием в вашем коде [cсылки](https://github.com/petrmileshko/php-projects/) на этот репозиторий.
