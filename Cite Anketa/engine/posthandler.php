@@ -5,7 +5,7 @@
         
         if(checkName(multiStrip($_POST['userLogin']),$dbConnect) == 0 ) {
             require('lib/tplib.php');
-            $content = '<span class="errorMsg">Пользователь с таким именем не найден.</span>';
+            $content = '<div class="errorMsg">Пользователь с таким именем не найден.</div>';
 
             require('engine/authreg.php');
             mysqli_close($dbConnect);
@@ -27,7 +27,7 @@
         }
         else {
             require('lib/tplib.php');
-            $content = '<span class="errorMsg">Пароль введен неверно.</span>';
+            $content = '<div class="errorMsg">Пароль введен неверно.</div>';
 
             require('engine/authreg.php');
             mysqli_close($dbConnect);
@@ -41,7 +41,7 @@
             
                 if($resultReg) {
                     require('lib/tplib.php');
-                    $content = '<span class="successMsg">Регистрация прошла успешно.</span>';
+                    $content = '<div class="successMsg">Регистрация прошла успешно.</div>';
                     $content .= "<br>Пользователь = ".multiStrip($_POST['newLogin'])."<br>Пароль = ".multiStrip($_POST['newPass']);
 
                     require('engine/authreg.php');
@@ -51,7 +51,7 @@
                 else {
                     
                     require('lib/tplib.php');
-                    $content = '<span class="errorMsg">Не удалось зарегистрировать. Обратитесь в поддержку.</span>';
+                    $content = '<div class="errorMsg">Не удалось зарегистрировать. Обратитесь в поддержку.</div>';
                     $content .= "<br>Пользователь = ".multiStrip($_POST['newLogin'])."<br>Пароль = ".multiStrip($_POST['newPass'])."<br>Email = ".multiStrip($_POST['newEmail']);
 
                     require('engine/authreg.php');
@@ -61,7 +61,7 @@
         }
         else {
                     require('lib/tplib.php');
-                    $content = '<span class="errorMsg">Введенное имя уже занято.</span>';
+                    $content = '<div class="errorMsg">Введенное имя уже занято.</div>';
 
                     require('engine/authreg.php');
                     mysqli_close($dbConnect);
@@ -114,7 +114,7 @@
                                 unset($_POST['AnketaName']);
                                 
                                  clearTable(TBACTIVE,$dbConnect);    // очищаем таблицу 
-                                $content = '<span class="successMsg">Анкета успешно сохранена.</span>';
+                                $content = '<div class="successMsg">Анкета успешно сохранена.</div>';
                                 
                             }
                             else switch((int)$_POST['type']) {  //иначе начинаем или продолжаем создавать анкету
@@ -131,7 +131,7 @@
                                     $_SESSION['questionsCounter'] += 1; // увеличиваем счечик на 1 после добавления вопроса в анкету
                                     break;
                                 default: 
-                                   if($_POST['questions']) $content = '<span class="errorMsg">Ошибка - тип вопроса.</span>'; 
+                                   if($_POST['questions']) $content = '<div class="errorMsg">Ошибка - тип вопроса.</div>'; 
                                     break;
                             }
                         
@@ -159,15 +159,15 @@
                             file_put_contents($pathAnswer, $anketaCompleted );
                             
                         insertToTable('user_id',$_SESSION['user_id'],TBACTIVE,$dbConnect);    // после заполнения активной анкеты заносим пользователя в базу данных тех кто прошел анкету
-                        $content = '<span class="successMsg">Анкета заполнена и успешно сохранена.</span>';
+                        $content = '<div class="successMsg">Анкета заполнена и успешно сохранена.</div>';
                        
                         }
                         break;
-                    case 6: // Панель преподавателя просмотр новых анкет
+                    case 6: // Панель продвинутого пользователя просмотр новых анкет
                         $_SESSION['Administrate'] = 6;
                         $pg=1;
                         break;
-                    case 7: // Панель преподавателя просмотра заполненых анкет 
+                    case 7: // Панель продвинутого пользователя просмотра заполненых анкет 
                         $_SESSION['Administrate'] = 7;
                         $pg=1;
 
@@ -183,7 +183,7 @@
                             
                             file_put_contents($pathActive, $anketaTpl );  // заменяем в файл в папке активная форма на выбранную
                             
-                           $formActivated = '<span class="successMsg">Анкета активирована.</span>';
+                           $formActivated = '<div class="successMsg">Анкета активирована.</div>';
                         
                         }
                         
@@ -202,7 +202,7 @@
                         }
                         
                         break;
-                    case 10: // Панель преподавателя просмотра пользователей 
+                    case 10: // Панель продвинутого пользователя просмотра пользователей 
                         $_SESSION['Administrate'] = 10;
                         $pg=1;
 
@@ -214,8 +214,8 @@
                          require('lib/tplib.php');
                         $resultReg = registerUser( multiStrip($_POST['nLogin']), multiStrip($_POST['nPass']), multiStrip($_POST['nEmail']), (int)multiStrip($_POST['nPriv']), (int)multiStrip($_POST['nConfirm']), $dbConnect);
                             
-                        if($resultReg) $content = '<span class="successMsg">Пользователь: '.multiStrip($_POST['nLogin']).' добавлен.</span><br>';
-                        else $content = '<span class="errorMsg">Ошибка добавления пользователя.</span>';
+                        if($resultReg) $content = '<div class="successMsg">Пользователь: '.multiStrip($_POST['nLogin']).' добавлен.</div><br>';
+                        else $content = '<div class="errorMsg">Ошибка добавления пользователя.</div>';
                         $pg=1;
                         }
                         

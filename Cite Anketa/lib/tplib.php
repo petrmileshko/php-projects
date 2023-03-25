@@ -1,8 +1,8 @@
-<!--             Библиотека переменных и функций для обработки шаблонов             -->
+
 <?php
 $titlePage = $Navigation = $authorisation = $content = $contentTop = $middle = $Footer ='';
 //$logoShop = '<img src="/images/system/logo.jpg" alt="logo Smart Shop">';
-
+$SiteHeaderName = '<h1 class="SiteHeading">Онлайн АНКЕТА</h1>';
 $metatags = file_get_contents('templates/metatags.html');
     
 // массив шаблонов
@@ -39,8 +39,8 @@ $footTpl = ( empty($_SESSION['authVisited']) or !isset($_SESSION['authVisited'])
 //  Проверка статуса и возврат строки уровня доступа
 function checkVisitor($visitor) {
     switch ($visitor) {
-        case 0: return 'Студент'; 
-        case 1: return 'Преподаватель';
+        case 0: return 'Пользователь'; 
+        case 1: return 'Продвинутый';
         case 2: return 'Администратор';
         default: return 'Гость';
     }
@@ -156,9 +156,9 @@ function UsersTpl($users,$tplFile) {
                 if($user['confirm']) { $confirm ='Да'; }
                 else { $confirm ='Нет'; }
                 switch ($user['priv_status']) {
-                    case 0: $status = 'Студент'; $ifDel = '<input type="submit" class="buttonsBasket Delete" onclick="deleteUser('.$user['id'].')" value=" X ">'; break;
-                    case 1: $status = 'Преподаватель'; $ifDel = '<input type="submit" class="buttonsBasket Delete" onclick="deleteUser('.$user['id'].')" value=" X ">'; break;
-                    case 2: $status = 'Админ';  $ifDel = '..'; break;
+                    case 0: $status = 'Пользователь'; $ifDel = '<input type="submit" class="buttonsBasket Delete" onclick="deleteUser('.$user['id'].')" value=" X ">'; break;
+                    case 1: $status = 'Продвинутый'; $ifDel = '<input type="submit" class="buttonsBasket Delete" onclick="deleteUser('.$user['id'].')" value=" X ">'; break;
+                    case 2: $status = 'Администратор';  $ifDel = '..'; break;
                     default: break;
                 }
 

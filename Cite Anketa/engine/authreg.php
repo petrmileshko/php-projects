@@ -7,7 +7,7 @@ $replaceWhere = file_get_contents( $templates[0] );
 
 $titlePage = ( empty($_GET['auth']) )  ? "Авторизация" : "Регистрация" ;
 
-$Navigation = '<h1>сайт анкета</h1>';
+$Navigation = $SiteHeaderName;
 
 $Footer = $footTpl;
 

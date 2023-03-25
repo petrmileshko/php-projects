@@ -14,7 +14,7 @@ switch($_SESSION['Administrate']) {                         // Определя�
         
     case 3: // Админка пользователей выводим панели и информацию о пользоватеях
         $titlePage = "Админка пользователей";
-        $Navigation ='<h1>САЙТ АНКЕТА. Кабинет Администратора</h1>';
+        $Navigation = $SiteHeaderName.'<p>Кабинет Администратора</p>';
         $contentTop .= ( $_SESSION['user_priv']!='2' ) ? '' : file_get_contents( $templates[5] ); // админ панель для пользователя с правами администратор
 
         $middle = accMiddleTpl( $_SESSION['user_name'], $_SESSION['user_email'], $_SESSION['user_confirm'], $Visitor, $templates[6] );
@@ -27,7 +27,7 @@ switch($_SESSION['Administrate']) {                         // Определя�
         break;
     case 4: // Админка создание анкет
         $titlePage = "Создание анкет";
-        $Navigation ='<h1>САЙТ АНКЕТА. Кабинет Администратора</h1>';
+        $Navigation = $SiteHeaderName.'<p>Кабинет Администратора</p>';
         $contentTop = ( $_SESSION['user_priv']!='2' ) ? '' : file_get_contents( $templates[5] ); // админ панель для пользователя с правами администратор
         
         $middle = accMiddleTpl( $_SESSION['user_name'], $_SESSION['user_email'], $_SESSION['user_confirm'], $Visitor, $templates[6] );
@@ -42,7 +42,7 @@ switch($_SESSION['Administrate']) {                         // Определя�
         break;
     case 8: // Админка просмотр созданных анкет
         $titlePage = "Просомтр новых анкет";
-        $Navigation ='<h1>САЙТ АНКЕТА. Кабинет Администратора</h1>';
+        $Navigation = $SiteHeaderName.'<p>Кабинет Администратора</p>';
         $contentTop = ( $_SESSION['user_priv']!='2' ) ? '' : file_get_contents( $templates[5] ); // админ панель для пользователя с правами администратор
         
         $middle = accMiddleTpl( $_SESSION['user_name'], $_SESSION['user_email'], $_SESSION['user_confirm'], $Visitor, $templates[6] );
@@ -76,7 +76,7 @@ switch($_SESSION['Administrate']) {                         // Определя�
         break;
     case 10: // Просмотр пользователей для преподавателя
         $titlePage = "Просмотр новых анкет";
-        $Navigation ='<h1>САЙТ АНКЕТА. Кабинет преподавателя</h1>';
+        $Navigation = $SiteHeaderName.'<p>Личный кабинет</p>';
         $contentTop = file_get_contents( $templates[7] ); // панель для пользователя с правами преподаватель
 
         $middle = accMiddleTpl( $_SESSION['user_name'], $_SESSION['user_email'], $_SESSION['user_confirm'], $Visitor, $templates[6] );
@@ -88,7 +88,7 @@ switch($_SESSION['Administrate']) {                         // Определя�
         break;
     case 6: // Просмотр новых анкет для преподавателя
         $titlePage = "Просмотр новых анкет";
-        $Navigation ='<h1>САЙТ АНКЕТА. Кабинет преподавателя</h1>';
+        $Navigation = $SiteHeaderName.'<p>Личный кабинет</p>';
         $contentTop = file_get_contents( $templates[7] ); // панель для пользователя с правами преподаватель
 
         $middle = accMiddleTpl( $_SESSION['user_name'], $_SESSION['user_email'], $_SESSION['user_confirm'], $Visitor, $templates[6] );
@@ -108,7 +108,7 @@ switch($_SESSION['Administrate']) {                         // Определя�
         break;
     case 7: // Просмотр заполненых анкет для преподавателя
         $titlePage = "Просмотр заполненых анкет";
-        $Navigation ='<h1>САЙТ АНКЕТА. Кабинет преподавателя</h1>';
+        $Navigation = $SiteHeaderName.'<p>Личный кабинет</p>';
         $contentTop = file_get_contents( $templates[7] ); // панель для пользователя с правами преподаватель
 
         $middle = accMiddleTpl( $_SESSION['user_name'], $_SESSION['user_email'], $_SESSION['user_confirm'], $Visitor, $templates[6] );
@@ -129,7 +129,7 @@ switch($_SESSION['Administrate']) {                         // Определя�
         break;
     case 9: // амин просмотр заполненых анкет
         $titlePage = "Просмотр заполненых анкет";
-        $Navigation ='<h1>САЙТ АНКЕТА. Кабинет Администратора</h1>';
+        $Navigation = $SiteHeaderName.'<p>Кабинет Администратора</p>';
         $contentTop = ( $_SESSION['user_priv']!='2' ) ? '' : file_get_contents( $templates[5] ); // админ панель для пользователя с правами администратор
         
         $middle = accMiddleTpl( $_SESSION['user_name'], $_SESSION['user_email'], $_SESSION['user_confirm'], $Visitor, $templates[6] );
@@ -154,9 +154,9 @@ switch($_SESSION['Administrate']) {                         // Определя�
         $titlePage = "Личный кабинет";
         
         switch($Visitor) {
-            case 'Преподаватель': $Navigation = '<h1>САЙТ АНКЕТА. Кабинет преподавателя</h1>'; break;
-            case 'Администратор': $Navigation = '<h1>САЙТ АНКЕТА. Кабинет Администратора</h1>'; break;
-            case 'Студент': $Navigation = '<h1>САЙТ АНКЕТА</h1>';
+            case 'Продвинутый': $Navigation = $SiteHeaderName.'<p>Личный кабинет</p>'; break;
+            case 'Администратор':  $Navigation = $SiteHeaderName.'<p>Кабинет Администратора</p>'; break;
+            case 'Пользователь': $Navigation = $SiteHeaderName.'<p>Личный кабинет</p>';
             default:break;
         }
        
@@ -179,9 +179,9 @@ switch($_SESSION['Administrate']) {                         // Определя�
         $middle = accMiddleTpl( $_SESSION['user_name'], $_SESSION['user_email'], $_SESSION['user_confirm'], $Visitor, $templates[6] );
         if(file_exists('data/active/active.html')) {
         switch($Visitor) {
-            case 'Преподаватель': $content .= (checkIfInTable('user_id',$_SESSION['user_id'],TBACTIVE,$dbConnect) ) ? '' : file_get_contents('data/active/active.html'); break;
+            case 'Продвинутый': $content .= (checkIfInTable('user_id',$_SESSION['user_id'],TBACTIVE,$dbConnect) ) ? '' : file_get_contents('data/active/active.html'); break;
             case 'Администратор': $content .= ''; break;
-            case 'Студент': $content .= (checkIfInTable('user_id',$_SESSION['user_id'],TBACTIVE,$dbConnect) ) ? '' : file_get_contents('data/active/active.html'); 
+            case 'Пользователь': $content .= (checkIfInTable('user_id',$_SESSION['user_id'],TBACTIVE,$dbConnect) ) ? '' : file_get_contents('data/active/active.html'); 
             default:break;
         }
         }
