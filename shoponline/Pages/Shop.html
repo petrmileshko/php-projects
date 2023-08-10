@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="WebPeterNet.com CopyRight by Petr Mileshko">
+    <meta name="description" content="WPN-SBMS (Small Business Management Systems)">
+    <meta name="keywords" content="business,internet,shop,frameworks">
+    <link rel="stylesheet" type="text/css" href="/Css/style.css">
+    <title>Shop</title>
+</head>
+<body>
+ <i style="font-size: 10px;">DeskTop alfa ver 1.0 build for Opera ver 67.0.3575.137 </i> 
+<?=$pageHeader?>
+    <div class="clear-fix"></div>
+    <div class="containerForm">
+    <form action="" method="get">
+        <fieldset>
+            <input type="hidden" name="page" value="Shop">
+            <!--<legend>Filters</legend>-->
+            <label class="labelsFilter" for="sortFilter">
+            <input type="radio" name="sortFilter" value="Bananas">Bananas
+            <input type="radio" name="sortFilter" value="Backpacks">Backpacks
+            <input type="radio" name="sortFilter" value="Wallets">Wallets</label>
+            <label class="labelsFilter">
+            &nbsp;<input type="color" name="colorFilter">
+            </label>
+            <?=$One?> <br>
+        </fieldset>
+    </form>
+    </div>
+    <div class="containerShopTable">
+    <div id="productsWrap">
+                <? if( $Two and is_array($Two) ) foreach($Two as $key=> $value):?>
+        <? if($value['status']): ?>
+            <div class="productUnit">
+                <img src="<?=$value['image']?>">
+                <div class="clear-fix"></div>
+                <div class="productName">
+                    <?=$value['name']?>
+                </div>
+                <div class="productPrice">
+                    <?=$value['sale_price']?> $
+                </div>
+            </div>
+        <? endif; ?>
+        <? endforeach; ?>
+    </div>
+
+    </div>
+<a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a><a href="https://webpeternet.com" style="text-decoration: none; color: darkgoldenrod; font-size: 10px;" 
+            target="_blank" >&copy;&nbsp;webpeternet.com</a></body>
+   
+</html>

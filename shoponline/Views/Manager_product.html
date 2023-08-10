@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="WebPeterNet.com CopyRight by Petr Mileshko">
+    <meta name="description" content="WPN-SBMS (Small Business Management Systems)">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="/Css/style.css">
+    <title><?=$Two['name']?></title>
+</head>
+<body class="w800">
+
+    <div class="Header">
+        <?=$pageHeader?>
+         <hr>
+    <ul class="Menu Left">
+        <li ><a href="/?page=Home">HOME</a></li>
+        <li><a href="/?page=Sales">SALES</a></li>
+        <li><a href="/?page=Purchases">PURCHASES</a></li>
+        <li><a href="/?page=Stock">STOCK</a></li>
+    </ul>
+    <ul class="Menu Right">
+        <li class="liSelected"><a>MANAGER</a></li>
+        <li><a href="/?page=Finance">FINANCE</a></li>
+        <li><a href="/?page=Reports">REPORTS</a></li>
+        <li><a href="/?page=Settings">SETTINGS</a></li>
+    </ul>
+        </div>
+         <hr>
+    
+    <div contenteditable="clear-fix"></div>
+
+    <div class="productForm">
+
+    <form action="<?=$action_cmd.'&img='.basename($Two['image'])?>" method="post" enctype="multipart/form-data">
+        <fieldset class="productCard">
+                        <legend>Id : <?=$Two['id']?></legend>
+            <div class="productImage">
+        <? if( basename($Two['image']) == 'default.jpg' ): ?>
+            <img src="<?=$Two['image']?>">
+        <? else: ?>
+            <img src="<?=$Two['image']?>" class="Product_image" onclick=document.location.href="<?=IMAGES_ORG_PATH.basename($Two['image'])?>">
+        <? endif; ?>
+        <? if( basename($Two['image']) == 'default.jpg' ): ?>
+        <input type="file" name="product_image" accept="image/jpeg">
+        <? else: ?>
+               <a href="/?page=Manager&action=delink&id=<?=$Two['id']?>&path=<?=$Two['image']?>" class="shopButtonsDel">x</a>
+        <? endif; ?>
+                
+            </div>
+            <div class="productInfo">
+               
+            <label class="labelsFilter">Product name :<br>
+            <input type="text" value="<?=$Two['name']?>" name="name" class="inputElements" required></label>
+            <br><label class="labelsFilter">Articul number :<br>
+            <input type="text" name="articul" value="<?=$Two['articul']?>" class="inputElements" required></label>
+            <br><label class="labelsFilter">Short description :<br>
+            <input type="text" name="description" value="<?=$Two['description']?>" class="inputElements"></label>
+            <br><label class="labelsFilter">Purchase price : $<br>
+            <input type="number" name="purchase_price" value="<?=$Two['purchase_price']?>" class="inputElements" placeholder="$" required></label>
+            <br><label class="labelsFilter">Sale price : $<br>
+            <input type="number" value="<?=$Two['sale_price']?>" name="sale_price" placeholder="$" class="inputElements" required></label><br>
+               
+            <label class="labelsFilter">Social 1:
+            <select name="social_1" class="selectSocial">
+            <? if( $Socials and is_array($Socials) ) foreach( $Socials as $value): ?>
+                <option value="<?=$value['id']?>" <?=($Two['social_1'] == $value['id'] ) ? 'selected' : ''?> ><?=$value['name']?></option>
+            <? endforeach;?>
+            </select>
+            </label>
+            <label class="labelsFilter">Social 2:
+            <select name="social_2" class="selectSocial">
+            <? if( $Socials and is_array($Socials) ) foreach( $Socials as $value): ?>
+                <option value="<?=$value['id']?>" <?=($Two['social_2'] == $value['id'] ) ? 'selected' : ''?> ><?=$value['name']?></option>
+            <? endforeach;?>
+            </select>
+            </label>
+            <label class="labelsFilter">Social 3:
+            <select name="social_3" class="selectSocial">
+            <? if( $Socials and is_array($Socials) ) foreach( $Socials as $value): ?>
+                <option value="<?=$value['id']?>" <?=($Two['social_3'] == $value['id'] ) ? 'selected' : ''?> ><?=$value['name']?></option>
+            <? endforeach;?>
+            </select>
+            </label>
+            </div>
+            <label class="labelsFilter">Colour :
+                <? if( $Color and is_array($Color) ) foreach( $Color as $value) {
+                        if ( $Two['color_id'] == $value['id'] ){
+                                $style_color = $value['code'];
+                                break;
+                        }
+                    }
+                ?>
+            <select name="color_id" style="background-color: <?=$style_color?>">
+            <? if( $Color and is_array($Color) ) foreach( $Color as $value): ?>
+                <option value="<?=$value['id']?>" style="background-color: <?=$value['code']?>" <?=($Two['color_id'] == $value['id'] ) ? 'selected' : ''?> ><?=$value['name']?></option>
+            <? endforeach;?>
+            </select>
+            </label>
+            <label class="labelsFilter"> &nbsp;Active:<input type="checkbox" name="status" <?=((int)$Two['status']) ? 'checked' : '' ?> > </label>&nbsp;
+            <?=$One?>
+            </fieldset>
+    </form>
+
+    </div>
+</body>
+   
+</html>

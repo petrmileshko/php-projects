@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="WebPeterNet.com CopyRight by Petr Mileshko">
+    <meta name="description" content="WPN-SBMS (Small Business Management Systems)">
+    <link rel="stylesheet" type="text/css" href="/Css/style.css">
+    <title>Manager</title>
+</head>
+<body class="w800">
+ <i style="font-size: 10px;">DeskTop alfa ver 1.0 build for Opera ver 67.0.3575.137 </i> 
+    <div class="Header">
+        <?=$pageHeader?>
+         <hr>
+    <ul class="Menu Left">
+        <li ><a href="/?page=Home">HOME</a></li>
+        <li><a href="/?page=Sales">SALES</a></li>
+        <li><a href="/?page=Purchases">PURCHASES</a></li>
+        <li><a href="/?page=Stock">STOCK</a></li>
+    </ul>
+    <ul class="Menu Right">
+        <li class="liSelected"><a>MANAGER</a></li>
+        <li><a href="/?page=Finance">FINANCE</a></li>
+        <li><a href="/?page=Reports">REPORTS</a></li>
+        <li><a href="/?page=Settings">SETTINGS</a></li>
+    </ul>
+   
+        </div>
+         <hr>
+    
+    <div class="containerWrap">
+    <div class="containerForm">
+    <form action="" method="get">
+        <fieldset>
+            <input type="hidden" name="page" value="Manager">
+            <legend>Add new product</legend>
+            <input type="text" name="name" placeholder="Enter name of product" value="">
+            <input type="text" name="articul" placeholder="Enter number of Articul" value="">
+            <input type="text" name="description" placeholder="Enter short description" value="">
+            <?=$One?> <br>
+        </fieldset>
+    </form>
+    </div>    
+    <div class="tableHeader">
+        <? if( $sysMessage and is_array($sysMessage) ): ?>
+        <div class="sysMessage <?=$sysMessage[1]?>"><?=$sysMessage[0]?></div>
+        <? endif; ?>
+    <table class="Products_Manager">
+        <tr><td  class="Product_ID">Id</td><td class="Product_name">Name</td><td class="Articul">Articul</td><td>Description</td><td class="Price">Price</td></tr>
+    </table>
+    </div>
+    <div class="containerTable">
+    <table class="Products_Manager tableBody">
+        <tr></tr>
+    <? if( $Two and is_array($Two) ) foreach($Two as $key=> $value): ?>
+    <tr class="Product_row <?=((int)$value['status']) ? '' : 'activeNo' ?>" onclick=document.location.href="/?page=Manager&action=product&id=<?=$value['id']?>">
+        <td class="Product_ID"><?=$value['id']?></td>
+        <td class="Product_name"><?=$value['name']?></td><td class="Articul"><?=$value['articul']?></td><td class="Product_Description"><?=$value['description']?></td><td class="Price"><?=$value['purchase_price']?> $</td></tr>
+    <? endforeach; ?>
+        </table>
+    </div>
+    </div>
+</body>
+</html>

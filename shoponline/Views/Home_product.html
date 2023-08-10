@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="WebPeterNet.com CopyRight by Petr Mileshko">
+    <meta name="description" content="WPN-SBMS (Small Business Management Systems)">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="/Css/style.css">
+    <title><?=$Two['name']?></title>
+</head>
+<body class="w800">
+
+    <div class="Header">
+        <?=$pageHeader?>
+         <hr>
+    <ul class="Menu Left">
+        <li class="liSelected"><a>HOME</a></li>
+        <li><a href="/?page=Sales">SALES</a></li>
+        <li><a href="/?page=Purchases">PURCHASES</a></li>
+        <li><a href="/?page=Stock">STOCK</a></li>
+    </ul>
+    <ul class="Menu Right">
+        <li><a href="/?page=Manager">MANAGER</a></li>
+        <li><a href="/?page=Finance">FINANCE</a></li>
+        <li><a href="/?page=Reports">REPORTS</a></li>
+        <li><a href="/?page=Settings">SETTINGS</a></li>
+    </ul>
+        </div>
+         <hr>
+    
+    <div contenteditable="clear-fix"></div>
+
+    <div class="productForm">
+
+    <form action="<?=$action_cmd.'&img='.basename($Two['image'])?>" method="post" enctype="multipart/form-data">
+        <fieldset class="productCard">
+                        <legend>Id : <?=$Two['id']?></legend>
+            <div class="productImage">
+        <? if( basename($Two['image']) == 'default.jpg' ): ?>
+            <img src="<?=$Two['image']?>">
+        <? else: ?>
+            <img src="<?=$Two['image']?>" class="Product_image" onclick=document.location.href="<?=IMAGES_ORG_PATH.basename($Two['image'])?>">
+        <? endif; ?>
+            </div>
+            <div class="productInfo">
+               
+            <label class="labelsInfo">Product :</label>
+            <?=$Two['name']?>
+            <br>
+            <label class="labelsInfo">Articul : </label>
+            <?=$Two['articul']?>
+            <br><br>
+            <label class="labelsInfo">Description :</label>
+            <?=$Two['description']?>
+            <br><br>
+            <label class="labelsInfo">Color :
+
+            <? if( $Color and is_array($Color) ) foreach( $Color as $value): ?>
+                <? if( ($Two['color_id'] == $value['id']) and  ($value['name'] !=  'Undefined') ): ?>
+                <div class="colorIndicator" style="background-color: <?=$value['code']?>"></div>
+                <? endif;?>
+            <? endforeach;?>
+            </label>
+            <br><br>
+            <label class="labelsPrice">Purchase price :
+            <?=$Two['purchase_price']?> $</label>
+            <label class="labelsPrice">Sale price :
+            <?=$Two['sale_price']?> $</label>
+            <label class="labelsPrice">Profit :
+            <?=($Two['sale_price']-$Two['purchase_price'])*0.95?> $</label>
+            <br><br>
+            <label class="labelsInfo">Available in the stock:</label>&nbsp;&nbsp;<?=mt_rand(10,50)?> pairs 
+            <br> <br>
+              <label class="labelsInfo">Social platroms in use for selling:</label>&nbsp;&nbsp;  
+            <? for($i=1;$i<4;$i++): ?>    
+            <? if( $Socials and is_array($Socials) ) foreach( $Socials as $value): ?>               
+                <? if ( $value['id'] !=  1 ): ?>
+                <a href="<?=$value['link']?>" target="_blank" class="social_link"><?=($Two['social_'.$i] == $value['id']) ? $value['svgicon'] : ''?></a>
+                <? endif; ?>
+            <? endforeach;?>
+            <? endfor;?>
+            </div><br>
+            <?=$One?>
+            </fieldset>
+    </form>
+
+    </div>
+</body>
+   
+</html>

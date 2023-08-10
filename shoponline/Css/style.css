@@ -1,0 +1,397 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+*:hover {
+    user-select: none;
+}
+
+/* Site name logo*/
+h1 {
+    font-style: oblique;
+    text-align: center;
+}
+
+h1:hover {
+    cursor: none;
+}
+#shopTitle {
+    outline: 1px solid black;
+    width: fit-content;
+    background-color: black;
+    color: white;
+}
+#siteTitle {
+    outline: 1px solid black;
+    width: fit-content;
+    text-decoration-line: overline;
+}
+.Header {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    float: left
+}
+
+.logo {
+    width: 100%;
+    background-color: black;
+}
+
+.logo img {
+    height: 30px;
+    padding-left: 35%;
+}
+
+.w800 {
+    min-width: 800px;
+}
+/* Tables on pages SALES, DELIVERY, MANAGER */
+.Products_Manager {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    border-spacing: 1px;
+}
+.tableBody {
+    width: 99%;
+}
+.Products_Manager tr:first-child td {
+    font-size: 16px;
+    font-style: oblique;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.Product_row {
+    height: 28px;
+}
+.Product_row:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.Product_row td {
+    border: 1px solid black;
+    font-size: 12px;
+    padding-right: 1%;
+}
+
+.Date {
+      width: 46px; 
+    text-align: right;
+}
+.Product_ID
+{
+   width: 46px;
+    text-align: right;
+}
+.Quantity {
+    width: 60px;
+    text-align: right;
+}
+.Price {
+    width: 70px;
+    text-align: right;
+}
+.Product_name {
+    width: 120px;
+    text-align: left;
+}
+
+.Product_image {
+    margin-right: 30px;
+}
+
+.Product_image:hover {
+    outline: 1px solid black;
+    cursor: pointer;
+}
+
+.Articul {
+    width: 90px;
+    text-align: right;
+}
+
+.activeNo {
+    background-color: gainsboro;
+    color: #00000075;
+}
+/* BUTTONS ON THE FILTER FORMS AND MANAGER FORMS */
+.shopButtons {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.shopButtons:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.shopButtons:focus {
+    background-color: white;
+    color: black;
+}
+
+.shopButtonsA {
+    display: inline-block;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 14px;
+    box-shadow: 1px 1px 1px 1px grey;
+    border-radius: 10px;
+}
+.shopButtonsA:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.shopButtonsA:active {
+    box-shadow: none;
+}
+.shopButtonsA:focus {
+    background-color: white;
+    color: black;
+}
+.shopButtonsDel {
+    display: block;
+    outline: auto;
+    text-align: center;
+    text-decoration: none;
+    color: red;
+    width: 14px;
+    height: 14px;
+    padding-bottom: 7px;
+    box-shadow: 1px 1px 1px 1px grey;
+    border-radius: 5px;
+}
+.shopButtonsDel:hover {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+.shopButtonsDel:active {
+    box-shadow: none;
+}
+/* DISABLE FOCUSING ON ITEMS ON ALL PAGES */
+form input:focus {
+    outline: none;
+}
+
+/* SITE MENU FORMATING */
+.Menu
+{
+    color: black;
+    text-decoration: none;
+}
+.Left {
+    float: left;
+}
+.Right {
+    float: right;
+    padding-right: 10px;
+}
+.Menu a
+{
+    color: black;
+    text-decoration: none;
+}
+.Menu a:hover
+{
+    background-color: black;
+    color: white;
+}
+.Menu a:focus
+{
+    background-color: black;
+    color: white;
+    outline: none;
+}
+
+.liSelected a {
+    background-color: black;
+    color: white;
+}
+.liSelected a:hover {
+    cursor: none;
+}
+
+/* CONTAINERS FOR FORMATING GRIDS  AND  SYSTEM MESSAGES */
+.clear-fix:after {
+    clear: both;
+    display: table;
+    content: "";
+}
+.clear {
+    height: 30px;
+}
+.sysMessage {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    margin-top: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.success {
+    background-color: lightgreen;    
+}
+.error {
+    background-color: red;    
+}
+.warning {
+    background-color: orange;
+}
+/* FORMATING LIST OF PRODUCTS PICTURES */
+#productsWrap {
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    margin-left: 3%;
+}
+.productUnit {
+    float: left;
+    width: 28%;
+    padding: 5px;
+    border: 1px solid rgba(225,225,225,0.7);
+    margin-right: 1%;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px #CCC;
+}
+.productUnit img {
+    float: left;
+    width: 98%;
+}
+.productUnit:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.productName {
+    font-size: smaller;
+    float: left;
+}
+.Product_Description {
+    text-align: left;
+}
+.productPrice {
+    font-size: smaller;
+    float: right;
+}
+
+/* ADDING SCROLL TO TABLES AND PRODUCTS GALLERY*/
+.containerTable {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 350px;
+    padding: 0 15%;
+    width: 70%;  
+}
+.tableHeader {
+    padding: 0 15%;
+    width: 68%;
+}
+.containerShopTable {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 450px;
+    padding: 0 15%;
+    width: 70%;  
+}
+
+/* FORMS FORMATING */
+.containerForm {
+    padding: 0 15%;
+    width: 68%;    
+}
+
+.containerForm fieldset {
+    border-radius: 10px;
+    padding-left: 15%;
+}
+.productForm {
+    padding: 0 15%;
+    width: 68%;    
+}
+.productImage {
+    float: left;
+    padding-left: 10px;
+    height: 264px;
+    width: min-content;
+}
+.productInfo {
+    
+    width: 100%;
+}
+.productForm fieldset {
+    border-radius: 10px;
+    padding-left: 1%;
+}
+
+input[type='date'] {
+    height: 15px;
+}
+
+.labelsFilter {
+    display: inline-block;
+    font-size: 12px;
+    padding-left: 2px;
+    padding-right: 2px;
+    background-color: black;
+    color: white;
+}
+
+.labelsInfo {
+    
+}
+
+.labelsPrice {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin-right: 10px;
+}
+.colorIndicator {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.productForm .selectSocial {
+    width: 90px;
+}
+.productForm .inputElements {
+    width: 418px;
+    margin-bottom: 5px;
+}
+.productCard {
+    min-width: 705px;
+    max-width: 800px;
+}
+.mt-space {
+    opacity: 0;
+}
+
+/* Product info card*/
+
+.social_link svg:hover {
+    color:white;
+    background-color: black;
+    outline: 1 solid silver;
+}
+*:focus-visible {
+    outline: none;
+}

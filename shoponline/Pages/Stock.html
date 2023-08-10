@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="WebPeterNet.com CopyRight by Petr Mileshko">
+    <meta name="description" content="WPN-SBMS (Small Business Management Systems)">
+    <link rel="stylesheet" type="text/css" href="/Css/style.css">
+    <title>STOCK</title>
+</head>
+<body class="w800">
+ <i style="font-size: 10px;">DeskTop alfa ver 1.0 build for Opera ver 67.0.3575.137 </i> 
+    <div class="Header">
+        <?=$pageHeader?>
+         <hr>
+    <ul class="Menu Left">
+        <li ><a href="/?page=Home">HOME</a></li>
+        <li><a href="/?page=Sales">SALES</a></li>
+        <li><a href="/?page=Purchases">PURCHASES</a></li>
+        <li class="liSelected"><a>STOCK</a></li>
+        
+    </ul>
+    <ul class="Menu Right">
+        <li ><a href="/?page=Manager">MANAGER</a></li>
+        <li><a href="/?page=Finance">FINANCE</a></li>
+        <li><a href="/?page=Reports">REPORTS</a></li>
+        <li><a href="/?page=Settings">SETTINGS</a></li>
+    </ul>
+   
+        </div>
+         <hr>
+    <div contenteditable="clear-fix"></div>
+    <div class="containerForm">
+      <form action="" method="get">
+        <fieldset>
+            <input type="hidden" name="page" value="Stock">
+            <label class="labelsFilter">
+            Under construction. Page info - inventory of the shop product's stock for all positions. </label>
+            <?=$One?> <br>
+        </fieldset>
+    </form>
+        </div>
+        <div class="tableHeader">
+        <? if( $sysMessage and is_array($sysMessage) ): ?>
+        <div class="sysMessage <?=$sysMessage[1]?>"><?=$sysMessage[0]?></div>
+        <? endif; ?>
+    <table class="Products_Manager">
+        <tr><td class="Product_ID">Id</td><td class="Product_name">Name</td><td class="Price">Price</td><td class="Quantity">Quantity</td><td class="Price">Total</td></tr>
+    </table>
+    </div>
+    <div class="containerTable">
+    <table class="Products_Manager tableBody">
+        <tr></tr>
+    <? if( $Two and is_array($Two) ) foreach($Two as $key=> $value): ?>
+    <tr class="Product_row"><td class="Product_ID"><?=$value['id']?></td><td class="Product_name"><?=$value['Product']?></td><td class="Price"><?=$value['Price']?> $ / <?=$value['Price']*27?> ₴</td><td class="Quantity"><?=$value['Quantity']?></td><td class="Price"><?=$value['Total']?> $ / <?=$value['Total']*27?> ₴</td></tr>
+    <? endforeach; ?>
+        </table>
+        </div>
+</body>
+</html>

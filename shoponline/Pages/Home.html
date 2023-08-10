@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="WebPeterNet.com CopyRight by Petr Mileshko">
+    <meta name="description" content="WPN-SBMS (Small Business Management Systems)">
+    <link rel="stylesheet" type="text/css" href="/Css/style.css">
+    <title>Home</title>
+</head>
+<body class="w800">
+ <i style="font-size: 10px;">DeskTop alfa ver 1.0 build for Opera ver 67.0.3575.137 </i>   
+    <div class="Header">
+        <?=$pageHeader?>
+         <hr>
+    <ul class="Menu Left">
+        <li class="liSelected"><a>HOME</a></li>
+        <li><a href="/?page=Sales">SALES</a></li>
+        <li><a href="/?page=Purchases">PURCHASES</a></li>
+        <li><a href="/?page=Stock">STOCK</a></li>
+    </ul>
+    <ul class="Menu Right">
+        <li><a href="/?page=Manager">MANAGER</a></li>
+        <li><a href="/?page=Finance">FINANCE</a></li>
+        <li><a href="/?page=Reports">REPORTS</a></li>
+        <li><a href="/?page=Settings">SETTINGS</a></li>
+    </ul>
+   
+        </div>
+         <hr>
+    <div contenteditable="clear-fix"></div>
+    <div class="containerForm">
+    <form action="" method="get">
+        <fieldset>
+            <input type="hidden" name="page" value="Home">
+            <legend>Filters</legend>
+            <label class="labelsFilter" for="sortFilter">Top : <input type="radio" name="sortFilter" value="Sales">Sales
+            <input type="radio" name="sortFilter" value="Profit">Profit</label>
+            <label class="labelsFilter">
+            From :<input type="date" name="timeFrom">
+            Till :<input type="date" name="timeTo"></label>
+            <?=$One?> <br>
+        </fieldset>
+    </form>
+    </div>
+    <div class="containerTable">
+       
+    <div id="productsWrap">
+         <? if( $Two and is_array($Two) ) foreach($Two as $key=> $value):?>
+        <? if($value['status']): ?>
+            <div class="productUnit" onclick=document.location.href="/?page=Home&action=product&id=<?=$value['id']?>" >
+                <img src="<?=$value['image']?>">
+                <div class="clear-fix"></div>
+                <div class="productName">
+                    <?=$value['name']?>
+                </div>
+                <div class="productPrice">
+                    <?=$value['sale_price']?> $
+                </div>
+            </div>
+        <? endif; ?>
+        <? endforeach; ?>   
+    </div>
+             
+    </div>
+</body>
+   
+</html>
