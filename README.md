@@ -8,7 +8,8 @@
 * Верстка по макету psd - финальная работа по интерактивному курсу HTML/CSS
 * верстка - самостоятельная практическая работа по ретро-верстке
 * Cite Anketa - исполнение заказа на [сайте fl.ru](https://www.fl.ru/users/mileshkopetr25/portfolio/) 
-* Online diary - исполнение заказа на [сайте fl.ru](https://www.fl.ru/users/mileshkopetr25/portfolio/) 
+* Online diary - исполнение заказа на [сайте fl.ru](https://www.fl.ru/users/mileshkopetr25/portfolio/)
+* shoponline - проект по собственной идеи, еще не завершен
 
 ## Рабочие демоверсии на хостинге:
 * [Cite Anketa](https://anketa.webpeternet.ru/)
