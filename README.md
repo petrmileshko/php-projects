@@ -11,11 +11,4 @@
 * Online diary - исполнение заказа на [сайте fl.ru](https://www.fl.ru/users/mileshkopetr25/portfolio/)
 * shoponline - проект по собственной идеи, еще не завершен
 
-## Рабочие демоверсии на хостинге:
-* [Cite Anketa](https://anketa.webpeternet.ru/)
-* [Online diary](https://school.webpeternet.ru/)
-* [REST API](https://api-data.webpeternet.com/readme.html)
-* [первая моя верстка - учебная](https://interior.webpeternet.com/)
-* [верстка ретро](https://pegasus-adpt.webpeternet.com/)
-
 Использование исходного кода из проектов возможно с указанием [cсылки](https://github.com/petrmileshko/php-projects/) на этот репозиторий.
