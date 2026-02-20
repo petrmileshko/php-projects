@@ -18,4 +18,4 @@
 * [первая моя верстка - учебная](https://interior.webpeternet.com/)
 * [верстка ретро](https://pegasus-adpt.webpeternet.com/)
 
-Использование исходного кода из проектов возможно с указанием в вашем коде [cсылки](https://github.com/petrmileshko/php-projects/) на этот репозиторий.
+Использование исходного кода из проектов возможно с указанием [cсылки](https://github.com/petrmileshko/php-projects/) на этот репозиторий.
