@@ -9,6 +9,6 @@
 * верстка - самостоятельная практическая работа по ретро-верстке
 * Cite Anketa - исполнение заказа на [сайте fl.ru](https://www.fl.ru/users/mileshkopetr25/portfolio/) 
 * Online diary - исполнение заказа на [сайте fl.ru](https://www.fl.ru/users/mileshkopetr25/portfolio/)
-* shoponline - проект по собственной идеи, еще не завершен
+* shoponline - самостоятельное проектирование системы управление торговлей (практика)
 
 Использование исходного кода из проектов возможно с указанием [cсылки](https://github.com/petrmileshko/php-projects/) на этот репозиторий.
